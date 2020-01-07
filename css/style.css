@@ -1,0 +1,49 @@
+.primary-main {
+  font-size: 60px;
+  font-weight: 600; }
+
+.primary-sub {
+  font-size: 51px;
+  font-weight: 600; }
+
+.header__logo {
+  float: left;
+  background: linear-gradient(115deg, #ea00be, #0a2342, #01baef, #30eafe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.nav {
+  text-align: right;
+  overflow: hidden;
+  margin: 0 0 0 auto;
+  padding: 15px 0; }
+  .nav__link {
+    text-decoration: none;
+    color: #727177;
+    font-size: 21px;
+    display: inline-block;
+    padding: 6px 12px; }
+
+.banner__avator {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #fff;
+  margin: auto; }
+
+.header {
+  padding: 30px 3% 0;
+  overflow: hidden;
+  background: #fff; }
+  .header::after {
+    content: '';
+    display: block;
+    background: #727177;
+    height: 0;
+    margin: 0px -5% 0;
+    padding: 1px 0; }
+
+.banner {
+  padding: 270px 0;
+  background: url("../../img/banner/banner.jpg") fixed no-repeat center 70%/cover; }

@@ -1,0 +1,14 @@
+.header {
+    &__logo-box {
+
+    }
+    &__logo {
+        // display: inline-block;
+        float: left;
+        background: linear-gradient(115deg,$color-primary-Purple,$color-primary-BlueDark,$color-primary-Blue,$color-primary-BlueLight);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+}

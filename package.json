@@ -1,0 +1,23 @@
+{
+  "name": "yuri",
+  "version": "1.0.0",
+  "description": "for my page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:css": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css sass/vendor/reset.css css/style.comp.css",
+    "prefix:css": "postcss css/style.concat.css -u autoprefixer -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm run compile:sass && npm run concat:css && npm run prefix:css && npm run compress:css"
+  },
+  "author": "yuri",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.0",
+    "postcss-cli": "^6.1.3"
+  }
+}
