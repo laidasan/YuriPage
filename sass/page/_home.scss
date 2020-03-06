@@ -1,18 +1,13 @@
-.header {
-    padding: 30px 3% 0;
-    overflow: hidden;
-    background: #fff;
-    &::after {
-        content: '';
-        display: block;
-        background: $color-primary-Gray;
-        height: 0;
-        margin: 0px -5% 0;
-        padding: 1px 0;
-    }
-}
-
-.banner {
-    padding: 270px 0;
-    background: url("../../img/banner/banner.jpg") fixed no-repeat center 70% / cover;
-}
+// .header {
+//     padding: 30px 3% 0;
+//     overflow: hidden;
+//     background: #fff;
+//     &::after {
+//         content: '';
+//         display: block;
+//         background: $color-primary-Gray;
+//         height: 0;
+//         margin: 0px -5% 0;
+//         padding: 1px 0;
+//     }
+// }

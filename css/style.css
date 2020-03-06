@@ -1,3 +1,18 @@
+@keyframes bannerTitleCursor {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Ubuntu', sans-serif; }
+
+body {
+  position: relative; }
+
 .primary-main {
   font-size: 60px;
   font-weight: 600; }
@@ -6,44 +21,54 @@
   font-size: 51px;
   font-weight: 600; }
 
-.header__logo {
-  float: left;
-  background: linear-gradient(115deg, #ea00be, #0a2342, #01baef, #30eafe);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent; }
-
-.nav {
-  text-align: right;
-  overflow: hidden;
-  margin: 0 0 0 auto;
-  padding: 15px 0; }
-  .nav__link {
-    text-decoration: none;
-    color: #727177;
-    font-size: 21px;
-    display: inline-block;
-    padding: 6px 12px; }
-
-.banner__avator {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: #fff;
-  margin: auto; }
-
 .header {
-  padding: 30px 3% 0;
-  overflow: hidden;
-  background: #fff; }
-  .header::after {
-    content: '';
-    display: block;
-    background: #727177;
-    height: 0;
-    margin: 0px -5% 0;
-    padding: 1px 0; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  perspective: 90rem; }
+  .header__nav {
+    font-size: 0;
+    text-align: right;
+    padding: 3rem 3rem 0 0; }
+    .header__nav__link {
+      position: relative; }
+      .header__nav__link:link, .header__nav__link:visited {
+        display: inline-block;
+        font-size: 2.1rem;
+        padding: 1.2rem 1.8rem;
+        text-decoration: none;
+        letter-spacing: .3rem;
+        color: #fff;
+        border: 0.15rem solid #fff;
+        border-radius: 10px;
+        transition: all .6s; }
+      .header__nav__link:hover {
+        color: #222222;
+        background: #fff;
+        border-color: #222222;
+        box-shadow: 2px 0 0 1px white;
+        transform: translateX(-6px) translateZ(-10px); }
+      .header__nav__link:not(:last-child) {
+        margin-right: 2.1rem; }
+      .header__nav__link::after {
+        content: '';
+        display: block;
+        margin-top: 3px;
+        height: 0;
+        width: 0;
+        padding: .1rem 0;
+        background: #222222;
+        transition: all .6s; }
+      .header__nav__link:hover::after {
+        padding: .1rem 36%; }
 
 .banner {
-  padding: 270px 0;
-  background: url("../../img/banner/banner.jpg") fixed no-repeat center 70%/cover; }
+  height: 100vh;
+  background: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .banner__title {
+    color: #fff;
+    letter-spacing: .8rem; }
