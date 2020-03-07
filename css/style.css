@@ -111,6 +111,13 @@ body {
         transition: all .6s; }
       .header__nav__link:hover::after {
         padding: .1rem 36%; }
+  @media only screen and (max-width: 600px) {
+    .header__nav {
+      text-align: center; }
+      .header__nav__link:link, .header__nav__link:visited {
+        padding: .6rem .9rem; }
+      .header__nav__link:not(:last-child) {
+        margin-right: .6rem; } }
 
 .loading {
   display: flex;

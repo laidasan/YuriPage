@@ -58,4 +58,21 @@
         }
     }
 
+    @include respond(phone) {
+        &__nav {
+            text-align: center;
+
+            &__link {
+                &:link,
+                &:visited {
+                    padding: .6rem .9rem;
+                }
+
+                &:not(:last-child) {
+                    margin-right: .6rem;
+                }
+            }
+        }
+    }
+
 }

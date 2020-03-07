@@ -18,11 +18,9 @@
         color: $color-white;  
         letter-spacing: .8rem;
         text-align: center;
-        // color: transparent;
         text-shadow: .9rem .6rem .3rem rgba($color-primary-Gray,.9);
         & > &Cursor {
             text-shadow: none;
-            // animation: bannerTitleCursor 1.2s linear infinite;
         }
     }
 }
