@@ -39,8 +39,12 @@
 
             &::after {
                 content: '';
-                display: block;
-                margin-top: 3px;
+                position: absolute;
+                left: 1.8rem;
+                top: 3.3rem;
+
+                // display: block;
+                // margin-top: 3px;
                 height: 0;
                 width: 0;
                 padding: .1rem 0;

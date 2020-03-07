@@ -6,12 +6,57 @@
   100% {
     opacity: 1; } }
 
+@keyframes loading-cube--LeftTop {
+  0% {
+    top: 0;
+    left: 0;
+    transform: rotate(0); }
+  25% {
+    top: 0;
+    left: calc(100% - 2.1rem);
+    transform: rotate(90deg); }
+  50% {
+    top: calc(100% - 2.1rem);
+    left: calc(100% - 2.1rem);
+    transform: rotate(180deg); }
+  75% {
+    top: calc(100% - 2.1rem);
+    left: 0;
+    transform: rotate(270deg); }
+  100% {
+    top: 0;
+    left: 0;
+    transform: rotate(360deg); } }
+
+@keyframes loading-cube--RightBottom {
+  0% {
+    bottom: 0;
+    right: 0;
+    transform: rotate(0); }
+  25% {
+    bottom: 0;
+    right: calc(100% - 2.1rem);
+    transform: rotate(-90deg); }
+  50% {
+    bottom: calc(100% - 2.1rem);
+    right: calc(100% - 2.1rem);
+    transform: rotate(-180deg); }
+  75% {
+    bottom: calc(100% - 2.1rem);
+    right: 0;
+    transform: rotate(-270deg); }
+  100% {
+    bottom: 0;
+    right: 0;
+    transform: rotate(-360deg); } }
+
 :root {
   font-size: 62.5%;
   font-family: 'Ubuntu', sans-serif; }
 
 body {
-  position: relative; }
+  position: relative;
+  background: #222222; }
 
 .primary-main {
   font-size: 60px;
@@ -20,6 +65,9 @@ body {
 .primary-sub {
   font-size: 51px;
   font-weight: 600; }
+
+.u-display-none {
+  display: none; }
 
 .header {
   position: absolute;
@@ -53,8 +101,9 @@ body {
         margin-right: 2.1rem; }
       .header__nav__link::after {
         content: '';
-        display: block;
-        margin-top: 3px;
+        position: absolute;
+        left: 1.8rem;
+        top: 3.3rem;
         height: 0;
         width: 0;
         padding: .1rem 0;
@@ -62,6 +111,42 @@ body {
         transition: all .6s; }
       .header__nav__link:hover::after {
         padding: .1rem 36%; }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .loading-container {
+    position: relative; }
+    .loading-container::after {
+      content: attr(title);
+      position: absolute;
+      bottom: -1.5rem;
+      left: 0;
+      right: 0;
+      transform: translateY(100%);
+      text-align: center;
+      font-size: 1.8rem;
+      color: #fff; }
+  .loading .loading--cube {
+    position: relative;
+    width: 12rem;
+    height: 12rem; }
+    .loading .loading--cube::before, .loading .loading--cube::after {
+      content: '';
+      position: absolute;
+      width: 2.1rem;
+      height: 2.1rem;
+      background: #fff; }
+    .loading .loading--cube::after {
+      top: 0;
+      left: 0;
+      animation: loading-cube--LeftTop 1.5s ease-in-out  infinite; }
+    .loading .loading--cube::before {
+      bottom: 0;
+      right: 0;
+      animation: loading-cube--RightBottom 1.5s ease-in-out infinite; }
 
 .banner {
   height: 100vh;

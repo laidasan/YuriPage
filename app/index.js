@@ -86,6 +86,10 @@
 
 
     window.onload = () => {
-        bannerStrAni();
+        setTimeout(() => {
+            document.querySelector('.loading').style.setProperty('display','none');
+            document.querySelector('main').classList.remove('u-display-none');
+            bannerStrAni();
+        },1500);
     }
 })()
