@@ -21,4 +21,7 @@
             background: #cd0000;
         }
     }
+    @include respond(phone) {
+        display: none;
+    }
 }
