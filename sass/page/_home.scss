@@ -11,3 +11,13 @@
 //         padding: 1px 0;
 //     }
 // }
+.main {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    &-page {
+        height: 100vh;
+        transition: all 1s;
+    }
+}

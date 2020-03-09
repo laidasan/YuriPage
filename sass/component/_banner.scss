@@ -1,26 +1,26 @@
 .banner {
-    // &__avator {
-
-    //     width: 150px;
-    //     height: 150px;
-    //     border-radius: 50%;
-    //     background: #fff;
-    //     margin: auto;
-    // }
-
-    height: 100vh;
     background: $color-primary-Black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    height: 100vh;
+    
     &__title {
+        max-width: 90%;
         color: $color-white;  
         letter-spacing: .8rem;
         text-align: center;
         text-shadow: .9rem .6rem .3rem rgba($color-primary-Gray,.9);
+        margin-bottom: 3rem;
+        box-shadow: 0 0 0 1px #cd0000;
         & > &Cursor {
             text-shadow: none;
         }
+    }
+
+    &__timeline {
+        font-size: 2.4rem;
+        color: $color-white;
     }
 }

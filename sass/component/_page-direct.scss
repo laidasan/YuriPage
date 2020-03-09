@@ -1,0 +1,24 @@
+.page-direct {
+    position: fixed; top: 50%;right: 3rem;
+    transform: translateY(-50%);
+    // box-shadow: 0 0 0 1px #fff;
+    // background: #fff;
+    z-index: 999;
+
+    & > a {
+        &:link,
+        &:visited {
+            display: block;
+            text-decoration: none;
+            font-size: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: $color-white;
+            margin: 1.2rem 0;
+        }
+        &.choose {
+            background: #cd0000;
+        }
+    }
+}
