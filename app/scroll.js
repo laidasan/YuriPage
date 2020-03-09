@@ -6,7 +6,7 @@
     let thispage = 0;
     let isScrolling = false;
     
-
+    console.log(navigator.userAgent)
     function scrollPage(e) {
         console.log(e.wheelDelta);   
         let viewup = e.wheelDelta > 0 ? true : false;
@@ -34,11 +34,17 @@
         window.onload = () => {
             console.log(old.then(result => {
                 return new Promise((resolve,rejcet) => {
-                    window.addEventListener('mousewheel',scrollPage);
-                    $mainPages[0].addEventListener('transitionend',(e) => {
-                        console.log('change isScrolling')
-                        isScrolling = false;
-                    })
+                    if(universal['isMobile'](navigator.userAgent)) {
+                        console.log('isMobile');
+                    }else {
+                        console.log(result)
+                        window.addEventListener('mousewheel',scrollPage);
+                        $mainPages[0].addEventListener('transitionend',(e) => {
+                            console.log('change isScrolling')
+                            isScrolling = false;
+                        })
+                    }
+                    resolve(result);
                 })
             }))
         }
