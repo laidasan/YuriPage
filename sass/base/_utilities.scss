@@ -1,3 +1,18 @@
 .u-display-none {
     display: none;
 } 
+
+.u-color-white {
+    color: $color-white;
+}
+.u-color-black {
+    color: $color-primary-Black;
+}
+
+
+.u-border-white {
+    border-color: $color-white;
+}
+.u-border-black  {
+    border-color: $color-primary-Black;
+}

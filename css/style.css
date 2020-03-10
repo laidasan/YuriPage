@@ -54,9 +54,6 @@
   font-size: 62.5%;
   font-family: 'Ubuntu', sans-serif; }
 
-body {
-  background: #222222; }
-
 .primary-main {
   font-size: 6rem;
   font-weight: 600; }
@@ -74,11 +71,19 @@ body {
 .u-display-none {
   display: none; }
 
+.u-color-white {
+  color: #fff; }
+
+.u-color-black {
+  color: #222222; }
+
+.u-border-white {
+  border-color: #fff; }
+
+.u-border-black {
+  border-color: #222222; }
+
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   perspective: 90rem; }
   .header__nav {
     font-size: 0;
@@ -92,8 +97,7 @@ body {
         padding: 1.2rem 1.8rem;
         text-decoration: none;
         letter-spacing: .3rem;
-        color: #fff;
-        border: 0.15rem solid #fff;
+        border: .15rem solid;
         border-radius: 10px;
         transition: all .6s; }
       .header__nav__link:hover {
@@ -116,10 +120,11 @@ body {
         transition: all .6s; }
       .header__nav__link:hover::after {
         padding: .1rem 36%; }
+  .header + .banner {
+    margin-top: -6.6rem; }
   @media only screen and (max-width: 600px) {
     .header__nav {
-      padding: 0;
-      padding-top: 3rem;
+      padding-right: 0;
       text-align: center; }
       .header__nav__link:link, .header__nav__link:visited {
         padding: .6rem .9rem;
@@ -208,6 +213,43 @@ body {
     font-size: 2.4rem;
     color: #fff; }
 
+.sample-container {
+  display: flex;
+  margin: 0 6%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap; }
+
+.sample__wrap {
+  position: relative;
+  max-width: 300px;
+  min-width: 300px;
+  box-shadow: 0 0 0 1px #cd0000; }
+
+.sample__img-box {
+  position: relative;
+  height: 240px; }
+
+.sample__img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+  .sample__img:not[src] {
+    visibility: hidden; }
+  .sample__img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #cd0000;
+    visibility: visible; }
+
+.sample__txt {
+  padding: 1.5rem .6rem; }
+
 .main {
   height: 100vh;
   position: relative;
@@ -216,3 +258,15 @@ body {
     position: relative;
     height: 100vh;
     transition: all 1s; }
+  .main--main {
+    background: #222222; }
+  .main--sample {
+    background: #f0f0f0; }
+    .main--sample > .header::after {
+      content: '';
+      display: block;
+      height: 1px;
+      padding: 2.1rem 0;
+      margin: 0 6%;
+      background: #222222;
+      background-clip: content-box; }

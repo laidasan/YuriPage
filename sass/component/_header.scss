@@ -1,8 +1,4 @@
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     perspective: 90rem;
 
     &__nav {    
@@ -18,8 +14,9 @@
                 padding: 1.2rem 1.8rem;
                 text-decoration: none;
                 letter-spacing: .3rem;
-                color: $color-white;
-                border: .15rem solid $color-white;
+                // color: $color-white;
+                // border: .15rem solid $color-white;
+                border: .15rem solid;
                 border-radius: 10px;
                 
                 transition: all .6s;
@@ -57,12 +54,15 @@
         }
     }
 
+    & + .banner {
+        margin-top: -6.6rem;
+    }
+
     @include respond(phone) {
         // margin: auto 0;
 
         &__nav {
-            padding: 0;
-            padding-top: 3rem;
+            padding-right: 0;
             text-align: center;
 
 
