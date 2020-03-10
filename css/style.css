@@ -118,11 +118,14 @@ body {
         padding: .1rem 36%; }
   @media only screen and (max-width: 600px) {
     .header__nav {
+      padding: 0;
+      padding-top: 3rem;
       text-align: center; }
       .header__nav__link:link, .header__nav__link:visited {
-        padding: .6rem .9rem; }
+        padding: .6rem .9rem;
+        margin: 0 .9rem; }
       .header__nav__link:not(:last-child) {
-        margin-right: .6rem; } }
+        margin-right: 0; } }
 
 .loading {
   display: flex;
@@ -210,5 +213,6 @@ body {
   position: relative;
   overflow: hidden; }
   .main-page {
+    position: relative;
     height: 100vh;
     transition: all 1s; }

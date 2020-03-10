@@ -4,7 +4,6 @@
     left: 0;
     right: 0;
     perspective: 90rem;
-    // transform-style: preserve-3d;
 
     &__nav {    
         font-size: 0;
@@ -59,17 +58,24 @@
     }
 
     @include respond(phone) {
+        // margin: auto 0;
+
         &__nav {
+            padding: 0;
+            padding-top: 3rem;
             text-align: center;
+
+
 
             &__link {
                 &:link,
                 &:visited {
                     padding: .6rem .9rem;
+                    margin: 0 .9rem;
                 }
 
                 &:not(:last-child) {
-                    margin-right: .6rem;
+                    margin-right: 0;
                 }
             }
         }

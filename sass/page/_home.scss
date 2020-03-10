@@ -17,6 +17,7 @@
     overflow: hidden;
 
     &-page {
+        position: relative;
         height: 100vh;
         transition: all 1s;
     }
