@@ -1,0 +1,35 @@
+.service {
+    padding: 60px 12%;
+    // overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &-wrap {
+        width: 30%;
+        text-align: center;
+        padding: 45px .6%;
+        box-shadow: 0 0 0 .5px $color-gray--light;
+        // margin: auto;
+
+        // float: left;
+        color: $color-black;
+    }
+    &__icon-box {
+    }
+    &__icon {
+        font-size: 42px;
+        vertical-align: middle;
+        color: $color-primary;
+    }
+
+    &__title{
+        margin: 18px 0;
+    }
+
+    &__intro {
+        font-size: 18px;
+        letter-spacing: 1.2px;
+        line-height: 1.5;
+    }
+}

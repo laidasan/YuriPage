@@ -1,0 +1,14 @@
+.primary-main {
+    font-size: 42px;
+    font-weight: 600;
+}
+.heading{
+    &-secondary {
+        font-size: 42px;
+        font-weight: 600;
+    }
+    &-fourth {
+        font-size: 21px;
+        font-weight: 600;
+    }
+}

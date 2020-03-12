@@ -1,0 +1,30 @@
+.nav {
+    &__link {
+        &:link,&:visited {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-white;
+            font-size: 24x;
+            display: block;
+            text-align: center;
+            padding: 42px 0;
+            position: relative;
+        }
+        &:nth-child(1) {
+            background: #0066aa;
+        }
+        &:nth-child(2) + &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            // height: 1px;
+            background: #aaa;
+
+            height: 0;
+            padding: .5px 0;
+
+        }
+    }
+}

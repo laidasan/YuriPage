@@ -1,0 +1,46 @@
+.page-main {
+    width: 90%;
+
+    float: left;
+    //左側導覽列關閉時
+    //利用負的margin-left讓page-main提到跟left同排
+    margin-left: -21%;
+
+    background: #fff;
+    transition: all .6s;
+    padding: 0 5%;
+}
+.page-left {
+    width: 21%;
+    transform: translateX(-100%);
+    transition: all .6s;
+    float: left;
+    // background: #333;
+    background: #fbfbfb;
+}
+
+.section{
+
+    &-erat {
+        padding: 60px 0;
+        overflow: hidden;
+        border-bottom: 3px solid #ccc;
+    }
+    &-ipsum {
+        padding: 60px 0;
+        overflow: hidden;
+    }
+}
+
+// @include respond(mid-mobile) {
+//     .page-main {
+//         float: none;
+//         width: auto;
+//         margin-left: 0;
+//         // overflow: hidden;
+//     }
+//     .page-left {
+//         // float: none;
+//     }
+
+// }

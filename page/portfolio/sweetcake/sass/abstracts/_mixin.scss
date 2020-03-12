@@ -1,0 +1,25 @@
+//  1024   desktop
+//  1200   middle-desktop
+
+@mixin respon($breakpoint) {
+    @if ($breakpoint == 'middle-desktop') {
+        @media only screen and (max-width:1200px) {@content};
+    }
+    @if ($breakpoint == 'desktop'){
+        @media only screen and (max-width: 1024px) {@content};
+    }
+    @if ($breakpoint == 'mobile') {
+        @media only screen and (max-width:768px){@content};
+    }
+    @if ($breakpoint == 'mobile-small') {
+        @media only screen and (max-width:375px){@content}
+    }
+}
+
+
+@mixin clearfix {
+    &::after {
+        display: block;
+        clear: both;
+    }
+}

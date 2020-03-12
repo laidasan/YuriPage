@@ -1,0 +1,94 @@
+.checkSuccess {
+    background: url("../img/image/checksuccess/banner.jfif") no-repeat center center / cover;
+    padding: 210px 0;
+    margin: 0 5%;
+    // &-container {
+    //     padding: 0 36%;
+    // }
+    &__circles {
+        position: absolute;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: $color-primary-greenDark;
+        z-index: 3;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 16px;
+            height: 3px;
+            width: 12px;
+            transform-origin: 50% 50%;
+            transform: rotate(45deg);
+            background: $color-white;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 3px;
+            height: 0;
+            padding: 15px 0 3px;
+            background: $color-white;
+            transform-origin: 50% 50%;
+            transform: rotate(45deg);
+        }
+        &:nth-child(1) {
+            left: 0;
+        }
+        &:nth-child(2) {
+            left: 0;
+            right: 0;
+            margin:  0 auto;
+        }
+        &:nth-child(3) {
+            right: 0;
+        }
+    }
+    &__line {
+        position: absolute;
+        height: 0;
+        left: 0;
+        top: 15px;
+        right: 0;
+        padding: 1.5px 0;
+        z-index: 2;
+        background: $color-primary-greenDark;
+    }
+
+    &__txt {
+        position: relative;
+        margin: 0 33%;
+        z-index: 1;
+        &__title {
+            text-align: center;
+            color: $color-primary-greenDark;
+            font-weight: 900;
+            padding: 60px 0 30px;
+        }
+    }
+    
+
+    @include respon('desktop') {
+        padding: 120px 0;
+        margin: 0;
+        &-container {
+            padding: 0 33%;
+        }
+    }
+
+    @include respon('mobile-small') {
+        padding: 180px 0 0;
+        &__txt {
+            margin: 0px 15%;
+            padding: 0 0 150px;
+        }
+    }
+}

@@ -1,0 +1,267 @@
+html {
+  font-size: 62.5%; }
+
+.heading-primary {
+  font-size: 51px;
+  font-weight: 600; }
+
+.heading-secondary {
+  font-size: 42px;
+  font-weight: 600; }
+
+.heading-thread {
+  font-size: 30px;
+  font-size: 500; }
+
+.u-text-center {
+  text-align: center; }
+
+.u-margin-bottom--mid {
+  margin-bottom: 21px; }
+
+.hidden {
+  visibility: hidden; }
+
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #666; }
+
+.btn--form {
+  text-transform: uppercase;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  border: none;
+  border-radius: 1rem;
+  background: #0275DB;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer; }
+  .btn--form:focus {
+    outline: none; }
+  .btn--form.warn {
+    background: #BEE1FF;
+    cursor: initial; }
+  .btn--form-1col {
+    width: 100%; }
+
+.form {
+  max-width: 510px;
+  max-width: 600px;
+  margin: auto;
+  font-size: 0; }
+  .form-group {
+    position: relative;
+    margin-bottom: 2.4rem; }
+  .form__label {
+    display: block;
+    font-size: 2.1rem;
+    margin-bottom: .6rem; }
+    .form__label--empty {
+      height: 2.1rem; }
+    .form__label--upload {
+      text-align: center;
+      color: #555;
+      padding: 4.8rem 0;
+      border: 0.15rem solid #000;
+      border-radius: .9rem;
+      color: #999;
+      cursor: pointer; }
+      .form__label--upload > i {
+        font-size: 51px; }
+      .form__label--upload-txt {
+        display: inline-block;
+        text-align: left; }
+        .form__label--upload-txt > span {
+          display: block; }
+          .form__label--upload-txt > span:not(:last-child) {
+            margin-bottom: .6rem; }
+  .form__input {
+    display: block;
+    font-size: 21px;
+    padding: 1.2rem 0 1.2rem 1.5rem;
+    width: calc(100% - 1.5rem);
+    outline: none;
+    border: 0.15rem solid #000;
+    border-radius: .6rem; }
+  .form__select {
+    padding: 1.2rem 0 1.2rem 1.5rem;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 0 .15rem #000;
+    border-radius: .6rem;
+    font-size: 21px; }
+    .form__select:required:invalid {
+      color: #555; }
+  .form__input:focus, .form__select:focus {
+    box-shadow: 0 0 0 0.21rem #BEE1FF; }
+  .form__control ~ i {
+    display: none;
+    position: absolute;
+    top: 4.3rem;
+    margin: auto 0;
+    right: 1.2rem; }
+  .form__control.warn, .form__control.warn:focus {
+    border: 0.15rem solid #f5a623; }
+  .form__control.warn ~ i {
+    display: block;
+    font-size: 18px;
+    color: #f5a623; }
+  .form__control.warn ~ .tooltip {
+    display: block; }
+  .form__control ~ .visa,
+  .form__control ~ .master {
+    display: none;
+    font-size: 2.4rem; }
+  .form__img-box {
+    position: relative;
+    height: 150px;
+    cursor: pointer;
+    overflow: hidden; }
+  .form__img-box:hover > .form__uploadImg::after {
+    transform: translateY(0); }
+  .form__uploadImg {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle; }
+    .form__uploadImg:not([src]) {
+      visibility: hidden; }
+    .form__uploadImg::after {
+      content: attr(alt);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #999;
+      font-size: 1.8rem;
+      text-align: center;
+      color: #fff;
+      padding: .6rem 0;
+      transform: translateY(100%);
+      transition: all .6s;
+      visibility: visible; }
+    .form__uploadImg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(190, 225, 255, 0.3);
+      box-shadow: 0 0 0 1px #cd0000;
+      visibility: visible; }
+  .form__delImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: #BEE1FF;
+    padding: 1.2rem 0;
+    transform: translateY(100%);
+    transition: all .6s;
+    display: none; }
+    .form__delImg > i {
+      font-size: 2.1rem;
+      color: #fff;
+      vertical-align: middle; }
+  .form__uploadImg[src] + .form__delImg {
+    display: block; }
+  .form__img-box:hover .form__delImg {
+    transform: translateY(0); }
+  .form__warnMessage {
+    display: none;
+    padding: 1.5rem 0;
+    font-size: 2.7rem;
+    text-align: center;
+    letter-spacing: .12rem;
+    color: #fff;
+    border-radius: .9rem; }
+    .form__warnMessage > i {
+      vertical-align: middle;
+      margin-right: .6rem; }
+    .form__warnMessage.warn {
+      display: block;
+      background: #f5a623; }
+  .form--2col {
+    display: inline-block;
+    width: 45%; }
+    .form--2col:not(:last-child) {
+      margin-right: 10%; }
+  .form--3col {
+    display: inline-block;
+    width: 30%; }
+    .form--3col:not(:last-child) {
+      margin-right: 3.3%; }
+
+.process {
+  font-size: 0;
+  padding: 3rem 0;
+  margin: 0 30%;
+  white-space: nowrap; }
+  .process__circle {
+    display: inline-block;
+    position: relative;
+    width: calc((100% - 2.22rem) / 3);
+    background: #BEE1FF;
+    z-index: -3; }
+    .process__circle:not(:last-child) {
+      height: .15rem; }
+    .process__circle::before, .process__circle::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: .15rem;
+      border-radius: 50%;
+      border: 0.21rem solid #BEE1FF;
+      z-index: 1; }
+    .process__circle::after {
+      z-index: -2;
+      background: #fff; }
+    .process__circle > i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto 0;
+      line-height: 0;
+      font-size: 2.22rem;
+      color: #0275DB; }
+  .process--checkin::before {
+    border: 0.21rem solid #0275DB;
+    background: #0275DB;
+    background-clip: content-box; }
+  .process--finished {
+    background: #0275DB; }
+    .process--finished::before, .process--finished::after {
+      border: none; }
+
+.tooltip {
+  position: absolute;
+  top: 3.6rem;
+  right: -2.1rem;
+  display: none;
+  margin: auto 0;
+  padding: .9rem .9rem;
+  border-radius: .6rem;
+  font-size: 1.5rem;
+  color: #fff;
+  transform: translateX(100%);
+  background: rgba(245, 166, 35, 0.9); }
+  .tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: -.8rem;
+    margin: auto 0;
+    width: 0;
+    height: 0;
+    border-right: 0.9rem solid #f5a623;
+    border-top: .9rem solid transparent;
+    border-bottom: .9rem solid transparent; }

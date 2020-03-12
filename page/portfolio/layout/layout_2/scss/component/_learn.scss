@@ -1,0 +1,95 @@
+.learn {
+    &-container {
+        padding: 0 15%;
+        display: flex;
+
+       
+    }
+
+    &__card {
+        width: 0;
+        flex: 1;
+        margin: auto 30px;
+        background: #fff;
+        border-radius: 6px;
+        &__img-box {
+            height: 300px;
+        }
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+            border-radius: 6px 6px 0 0;
+        }
+
+        &-txt {
+            text-align: center;
+            padding: 30px;
+        }
+
+        &__small {
+            color: #aaa;
+            font-size: 15px;
+            letter-spacing: 1.8px;
+        }
+
+        &__title {
+            color: rgba(0,0,0,.9);
+            line-height: 1.5;
+            letter-spacing: .9px;
+            margin: 12px 0;
+
+
+            &::before {
+                content: '';
+                display: block;
+                width: 0;
+                padding: 1px 120px 1px;
+                margin: 0 auto;
+                background: #ccc;
+            }
+        }
+
+        &__info {
+            margin: 12px 0;
+            text-align: left;
+            font-size: 18px;
+            color: #aaa;
+        }
+    }
+
+    @include respon(landscape) {
+        &-container {
+            display: block;
+        }       
+        &__card {
+            width: auto;
+            margin: 15px 0;
+            padding: 60px;
+
+
+            &__info {
+                margin: 24px 0 36px;
+            }
+        }
+    }
+    @include respon(phone) {
+        &-container {
+            padding: 0;
+        }
+        &__card {
+            margin: 0;
+            position: relative;
+            & + &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 1px;
+                background: #ccc;
+            }
+        }
+    }
+}

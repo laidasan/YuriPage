@@ -1,0 +1,22 @@
+.section {
+    padding: 120px 0;
+
+    &--form {
+        background: $color-bk;
+    }
+}
+.footer {
+    // padding: 60px 0;
+    padding: 0px 0 90px;
+    background: $color-bk;
+    text-align: center;
+
+    &::before {
+        content: '';
+        display: block;
+        margin: 0 auto 90px;
+        width: 0;
+        padding: .5px 25%;
+        background: $color-gray--light;
+    }
+}

@@ -1,0 +1,21 @@
+.footer {
+    padding:  120px 0;
+    text-align: center;
+
+    &::before {
+        content: '';
+        display: block;
+        padding: .5px 0;
+        margin: 0 3% 120px;
+        background: #ccc;
+    }
+
+    &__info {
+        &--small {
+            display: block;
+            color: #999;
+            letter-spacing: 3px;
+            margin: 15px;
+        }
+    }
+}

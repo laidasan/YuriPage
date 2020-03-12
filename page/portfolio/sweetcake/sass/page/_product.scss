@@ -1,0 +1,40 @@
+.product {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 5%;
+    &__list {
+        min-width: 33%;
+        &__title {
+            text-align: center;
+            padding: 15px 0;
+            background: $color-primary-greenDark;
+            color: $color-white;
+            // box-shadow: 0 0 1px #cd0000;
+        }
+        &__item {
+            font-weight: 600;
+        }
+    }
+    &__container {
+        max-width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include respon('mobile') {
+        & {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        &__list {
+            margin-bottom: 30px;
+        }
+
+        &__container {
+            max-width: initial;
+            padding: 0 6%;
+        }
+    }
+}

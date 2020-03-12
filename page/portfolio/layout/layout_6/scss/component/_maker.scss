@@ -1,0 +1,26 @@
+.maker {
+    overflow: hidden;
+    padding: 12px 0;
+    font-size: 21px;
+    &::after {
+        content: '';
+        display:block;
+        padding: 3px 0;
+        background: #fc5a5a;
+        margin-top: 12px;
+    }
+    &__author {
+        color: #333;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            color: $color-primary;
+        }
+        &__name {
+            color: #666;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}

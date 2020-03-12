@@ -1,0 +1,20 @@
+body {
+    background: url("../../img/banner-bk.jpg") no-repeat center center / cover;
+    background: linear-gradient(90deg,rgba($color-primary-cotta,.6),rgba($color-primary-carndial,.6));
+}
+
+.body { 
+    
+    &-container {
+        min-width: 600px;
+        max-width: 1200px;
+        border-radius: 6px;
+        margin: 180px auto;
+        box-shadow: 0 0 1px #cd0000;
+        @include respon(phone) {
+            margin: 0;
+            border-radius: 0 0 0 0;
+            box-shadow: none;
+        }
+    }
+}

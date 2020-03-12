@@ -1,0 +1,29 @@
+.section__title {
+    &-txt {
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 45px;
+        font-weight: 400;
+
+        &--rose {
+            color: $color-primary-rose;
+        }
+        &--white {
+            color: #fff;
+        }
+
+    }
+    &__info {
+        color: #999;
+        padding: 0 21%;
+        font-size: 21px;
+        margin: 30px 0;
+
+        &--white {
+            color: #fff;
+        }
+
+    }
+}

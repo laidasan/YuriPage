@@ -1,0 +1,103 @@
+html {
+  overflow-y: scroll; }
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+:root body {
+  position: absolute; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("../../Img/body-bk.jpg") fixed center center/cover; }
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.heading-main {
+  font-size: 51px;
+  font-weight: 600; }
+
+.heading-secondary {
+  font-size: 42px;
+  font-weight: 400; }
+
+.heading-fourth {
+  font-size: 21px;
+  font-weight: 600; }
+
+.pagecover__container {
+  display: flex;
+  height: 100vh; }
+
+.pagecover__txt {
+  width: 0;
+  flex: 3;
+  padding: 90px;
+  color: #fff;
+  text-shadow: 6px 6px 9px rgba(0, 0, 0, 0.6); }
+  .pagecover__txt h1 {
+    text-transform: uppercase; }
+  .pagecover__txt h1:before, .pagecover__txt h1:after {
+    content: '';
+    display: block;
+    font-size: 0;
+    padding: 1.5px 0;
+    background: linear-gradient(90deg, #9E643C, #83935C); }
+  .pagecover__txt h1:before {
+    margin-right: 42%; }
+  .pagecover__txt h1:after {
+    margin-right: 69%; }
+  .pagecover__txt h4 {
+    text-align: center;
+    background: linear-gradient(90deg, #9E643C, #83935C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); }
+
+.pagecover__subscribe {
+  width: 0;
+  flex: 1;
+  box-shadow: 0 0 1px #cd0000;
+  display: flex;
+  flex-direction: column; }
+  .pagecover__subscribe-wrap {
+    position: relative;
+    margin: auto; }
+  .pagecover__subscribe__circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+    left: -210px;
+    text-align: center;
+    line-height: 180px;
+    color: #fff;
+    font-size: 60px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    background: url("../../Img/body-bk.jpg") fixed center center/cover; }
+    .pagecover__subscribe__circle::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -3px;
+      right: 0;
+      margin: auto;
+      width: 186px;
+      height: 186px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #D1AB4D, #65655E, #242F40);
+      z-index: -1; }
+  .pagecover__subscribe__txt {
+    position: relative;
+    top: 50%;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); }

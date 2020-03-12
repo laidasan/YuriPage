@@ -1,0 +1,58 @@
+.connection {
+    overflow: hidden;
+    padding: 1px 15%;
+    &-wrap {
+        width: 33%;
+        float: left;
+        text-align: center;
+    }
+    &__icon-box {
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        border-radius: 50%;
+        box-shadow: 0 0 2px 0px #333;
+        line-height: 60px;
+    }
+    &__icon {
+        font-size: 27px;
+        vertical-align: middle;
+        color: $color-primary-rose;
+    }
+    &__info {
+        &:link,&:visited {
+            text-decoration: none;
+            color: #999;
+            font-size: 18px;
+            display: inline-block;
+            margin: 18px 0;
+        }
+
+        &:hover {
+            color: $color-primary-rose;
+            // text-decoration: dotted;
+            border-bottom: .6px dashed #999;
+
+        }
+    }
+
+    &__mapinfo {
+        font-size: 18px;
+        color: #999;
+        margin: 18px 0;
+    }
+
+    @include respon(phone) {
+        padding: 0;
+        &-wrap {
+            float: none;
+            margin: auto;
+            // display: block;
+        }
+
+        &__info {
+            margin: 0;
+            // text-align: center;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.section {
+    &__title {
+        padding: 30px 0;
+        // margin-left: 18px;
+        color: #333;
+        &::after {
+            content: '';
+            display: block;
+            margin-left: 3px;
+            margin-top: 12px;
+            // margin: 0 70% 0 6px;
+            width: 0;
+            height: 0;
+            padding: 3px 36px;
+            background: #f56a6a;
+        }
+        &--menu {
+            &::after {
+                padding: 3px 36px;
+            }
+        }
+        &--article-show {
+            &::after {
+                padding: 3px 90px;
+            }
+        }
+        &--footer {
+            &::after {
+                padding: 3px 75px;
+            }
+        }
+        &--erat {
+            &::after {
+                padding: 1.5px 90px;
+            }
+        }
+    }
+}

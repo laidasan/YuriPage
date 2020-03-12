@@ -1,0 +1,99 @@
+.process {
+
+    &__line {
+
+        padding: 0 18%;
+
+        display: flex;
+        &-wrap {
+            width: 0;
+            flex: 1;
+            text-align: center;
+            // box-shadow: 0 0 1px #cd0000;
+            // position: relative;
+
+            // & + &::before {
+            //     content: '';
+            //     position: absolute;
+            //     top: 60px;
+            //     // bottom: 0;
+            //     left: -60px;
+            //     // right: 0;
+            //     width: 120px;
+            //     height: 1px;
+            //     background: #aaa;
+            // }
+
+            &:not(:last-child) .process__line__icon-box::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -100%;
+                margin: auto 0;
+                height: 0;
+                padding: .5px 50% .5px ;
+                background: #aaa;
+            }
+
+        }
+
+        &__icon-box {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            line-height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px #aaa;
+            background: #fff;
+
+            
+        }
+        &__icon {
+            font-size: 42px;
+            color: $color-primary-rose;
+            vertical-align: middle;
+        }
+
+        &__pro {
+            font-size: 24px;
+            font-weight: 400;
+            color: #666;
+        }
+    }
+
+    @include respon(phone) {
+        &__line {
+            padding: 0;
+            display: block;
+            &-wrap {
+                padding: 1px;
+                overflow: hidden;
+                width: auto;
+                text-align: center;
+                &:not(:last-child) .process__line__icon-box::before {
+                    bottom: -121px;
+                    top: 120px;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    height: auto;
+                    padding: 0;
+                    width: 1px;
+                }
+            }
+
+            &__icon-box {
+                margin-left: 39%;
+                float: left;
+            }
+            &__pro {
+                float: left;
+                line-height: 120px;
+                overflow: hidden;
+                margin-left: 30px;
+            }
+        }
+    }
+}

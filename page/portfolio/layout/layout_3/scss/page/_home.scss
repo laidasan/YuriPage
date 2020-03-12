@@ -1,0 +1,35 @@
+.process {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.ImageShow {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.SignSection {
+    padding: 60px 0;
+    background: linear-gradient(90deg, #937f8f, #5a6284);
+}
+
+.InfoSection {
+    padding: 120px 0;
+    background: #fff;
+}
+
+
+.footer {
+    padding: 45px 30px;
+    background: #f1f1f1;
+    border-radius: 0 0 6px 6px;
+}
+
+@include respon(phone) {
+    .process {
+        padding: 30px 0;
+    }
+    .footer {
+        text-align: center;
+    }
+}

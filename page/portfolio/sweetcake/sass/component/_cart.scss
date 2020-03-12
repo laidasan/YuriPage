@@ -1,0 +1,221 @@
+.cart {
+
+    padding:  0 5%;
+    &-container {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    &-buy {
+        width: 67%;
+        margin-right: 3%;
+        &__title {
+            text-align: center;
+            background: $color-primary-article;
+            padding: 15px 0;
+            margin-bottom: 33px;
+        }
+        &__list {
+
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 30px;
+
+            &__imgbox {
+                width: 110px;   
+                height: 110px;
+            }
+            &__img {
+                @extend %img;
+            }
+
+            &Info {
+                
+                &__name {
+                    margin-bottom: 9px;
+                }
+
+                &__money {
+
+                }
+            }
+
+            &Operation {
+                font-size: 0;
+                &__each {
+                    display: inline-block;
+                    font-size: 18px;
+                    padding: 12px 18px;
+                    box-shadow: 0 0  1px #000;
+                    // border-top: 1px solid $color-primary-article;
+                }
+            }
+
+            &TotalMoney {
+                font-size: 21px;
+                color: $color-primary-greenDark;
+
+            }
+
+            &Delete {
+                cursor: pointer;
+                color: $color-primary-greenLight;
+            }
+        }
+    }
+
+
+      &-pay {
+        width: 33%;
+        padding: 15px 0 0;
+        background: $color-primary-greenDark;
+        align-self: flex-start;
+        &__title {
+            text-align: center;
+            color: $color-white;
+            margin-bottom: 15px;
+            padding: 0 18px;
+
+            &::after {
+                content: '';
+                display: block;
+                height: 0;
+                padding: 1px 0;
+                margin-top: 15px;
+                background: $color-white;
+            }
+        }
+
+        &__wrap {
+            overflow: hidden;
+            padding: 0 18px;
+            color: $color-white;
+            font-size: 18px;
+            span:nth-child(1) {
+            }
+            span:nth-child(2) {
+                float: right; 
+            }
+        }
+
+        &__commodityMoney {
+
+        }
+        &__transMoney {
+
+        }
+        &__totalMoney {
+            font-size: 27px;
+            span:nth-child(1) {
+                
+            }
+            span:nth-child(2) {
+                float: right; 
+            } 
+        }
+    }
+
+    @include respon('mobile') {
+        padding: 0;
+        &-container {
+            display: block;
+            margin: 0;
+        }
+        &-buy {
+            width: auto;
+            &__title {
+                text-align: center;
+                background: $color-primary-article;
+                padding: 15px 0;
+            }
+    
+            &__item {
+                display: block;
+                padding: 0 6%;
+                margin-bottom: 30px;
+                overflow: hidden;
+    
+                &__imgbox {
+                    float: left;
+                    width: 160px;   
+                    height: 119px;
+                }
+    
+                &Info {
+                    overflow: hidden;
+                    text-align: right;
+                    margin-bottom: 9px;
+                    &__name {
+                        margin-bottom: 9px;
+                        
+                    }
+                }
+    
+                &Operation {
+                    text-align: right;
+                    // overflow: hidden;
+                }
+    
+                &TotalMoney {
+                    display: block;
+                    text-align: right;
+                    font-size: 21px;
+                    color: $color-primary-greenDark;
+                    margin-top: 15px;
+    
+                }
+    
+                &Delete {
+                    font-size: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+    
+    
+          &-pay {
+            width: auto;
+            padding:0;
+            background: $color-white;
+            align-self: flex-start;
+            &__title {
+                text-align: center;
+                background: $color-primary-greenLight;
+                color: $color-white;
+                margin-bottom: 15px;
+                margin: 0 6% 15px;
+                padding: 15px 0;
+    
+                &::after {
+                    display: none;
+                }
+            }
+    
+            &__wrap {
+                overflow: hidden;
+                padding: 0 6%;
+                color: $color-primary-greenDark;
+                margin-bottom: 9px;
+                span:nth-child(1) {
+                }
+                span:nth-child(2) {
+                    float: right; 
+                }
+            }
+    
+            &__totalMoney {
+                font-size: 27px;
+                span:nth-child(1) {
+                    
+                }
+                span:nth-child(2) {
+                    float: right; 
+                } 
+            }
+        }
+    }
+}

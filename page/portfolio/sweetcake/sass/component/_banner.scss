@@ -1,0 +1,104 @@
+.banner {
+    &--home {
+        background: url("../img/image/home/banner.jfif") center center / cover;
+    }
+    &--product {
+        background: url("../img/image/product/banner.jfif") center center / cover;
+    }
+
+    &-container {
+        position: absolute;
+        margin: 0 9%;    
+        left: 0;
+        right: 0;
+        bottom: -33%;
+    }
+    
+    &__item {
+        font-size: 0;
+        color: $color-white;
+        position: relative;
+
+        display: inline-block;
+        // width: calc(99% / 3);
+        width: 100%;
+        max-width: calc(98% /3);
+        padding: 180px 0;
+        text-align: center;
+        writing-mode: vertical-lr;
+        writing-mode: tb-lr;
+        -webkit-writing-mode: vertical-lr;
+        letter-spacing: 9px;
+        z-index: 1;  
+
+        @include respon('desktop') {
+            padding: 120px 0;
+        }
+        // @media only screen and (min-width:1200px) {
+        //     padding: 120px 0;
+        // }
+        // < 1024   => padding: 60px 0;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 12px;
+            bottom :12px;
+            right: 12px;
+            left: 12px;
+            z-index: -3;
+            filter: blur(5px);
+        }
+        &:nth-child(1)::after {
+            background: url("../img/image/home/banner-img-1.jfif") no-repeat center center / cover;
+        }
+        &:nth-child(2)::after {
+            background: url("../img/image/home/banner-img-2.jfif") no-repeat center center / cover;
+        }
+        &:nth-child(3)::after {
+            background: url("../img/image/home/banner-img-3.jfif") no-repeat center center / cover;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+        }
+        &:nth-child(1)::before {
+            background: rgba($color-primary-yellow,.9);
+        }
+        &:nth-child(2)::before {
+            background: rgba($color-primary-greenDark,.9);
+        }
+        &:nth-child(3)::before {
+            background: rgba($color-primary-greenDark,.9);
+        }
+        
+        &:first-child &__title{
+            color: $color-primary-greenDark;
+            font-weight: 900;
+        }   
+    }
+
+    &__item__title {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 36px;
+        min-width: 36px;
+        margin: auto;
+    }
+
+    @include respon('mobile') {
+        &-container {
+            margin: 0;
+            top: 100%;
+        }
+    }
+}

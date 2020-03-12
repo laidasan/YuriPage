@@ -10,7 +10,14 @@
     "concat:css": "concat -o css/style.concat.css sass/vendor/reset.css css/style.comp.css",
     "prefix:css": "postcss css/style.concat.css -u autoprefixer -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm run compile:sass && npm run concat:css && npm run prefix:css && npm run compress:css"
+    "build:css": "npm run compile:sass && npm run concat:css && npm run prefix:css && npm run compress:css",
+    "layout:w": "node-sass page/portfolio/sweetcake/sass/main.scss page/portfolio/sweetcake/style/style.css -w",
+    "layout:compile": "node-sass page/portfolio/sweetcake/sass/main.scss page/portfolio/sweetcake/style/style.comp.css",
+    "layout:prefix": "postcss page/portfolio/sweetcake/style/style.comp.css -u autoprefixer -o page/portfolio/sweetcake/style/style.prefix.css",
+    "layout:compress": "node-sass page/portfolio/sweetcake/style/style.prefix.css page/portfolio/sweetcake/style/style.css --output-style compressed",
+    "layout:build": "npm run layout:compile && npm run layout:prefix && npm run layout:compress"
+
+
   },
   "author": "yuri",
   "license": "ISC",
@@ -21,3 +28,5 @@
     "postcss-cli": "^6.1.3"
   }
 }
+
+

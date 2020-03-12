@@ -1,0 +1,109 @@
+.page-home {
+    &__banner {
+        padding: 60px 30px;
+        text-align: center;
+        &__img-box {
+            max-width: 900px;
+            height: 450px;
+            margin-bottom: 60px;
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            vertical-align: center;
+            object-fit: cover;
+        
+        }
+    
+    
+        &__text {
+            font-size: 21px;
+            color: #666;
+        }
+        &__intro {
+            font-size: 16.5px;
+            padding: 60px 0;
+            line-height: 1.5;
+            color: #666;
+        }
+
+    }
+
+    &__article {
+        // border-top: 1px solid #ccc;
+        &::before {
+            content: '';
+            display: block;
+            height: 0;
+            background: #aaa;
+            padding: .5px 0;
+            margin: 0 6%;
+        }
+        &-wrap {
+            overflow: hidden;
+            // box-shadow: 0 0 1px #cd0000;
+            // padding: 60px 0;
+            padding: 60px;
+            position: relative;
+
+            & + &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 15%;
+                right: 9%;
+                height: 0;
+                padding: .3px 0;
+                background: #666;
+            }
+        }
+        &-time {
+            float: left;
+            width: 21%;
+            padding-top: 30px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                // top: 100%;
+                right: 21px;
+                width: 0;
+                padding: 120px 1px 0px;
+                background: #aaa;
+            }
+            &__mounth,&__day {
+                display: block;
+                text-align: right;
+                margin-right: 45px;
+                font-size: 21px;
+            }
+
+            &__day {
+                font-size: 30px;
+                font-weight: 600;
+            }
+        }
+        &-txt {
+            float: left;
+            width: 79%;
+            padding-top: 18px;
+            &__title {
+                margin-bottom: 12px;
+            }
+
+            &__link {
+                &:link,&:visited {
+                    text-decoration: none;
+                    color: $color-primary-black;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+}

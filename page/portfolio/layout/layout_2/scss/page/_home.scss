@@ -1,0 +1,21 @@
+.section-learn {
+    // height: 300px;
+    padding: 120px 0;
+    background: #eee;
+
+    @include respon(phone) {
+        padding: 0;
+    }
+}
+
+.section-MiddleBanner {
+    padding: 60px 0;
+
+    background: url("./img/banner-bk/middlebanner-bk.jpg") no-repeat fixed center center / cover; 
+}
+
+.section-photo {
+    padding: 60px 0;
+    background: #eee;
+
+}

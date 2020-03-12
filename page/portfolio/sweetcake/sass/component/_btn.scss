@@ -1,0 +1,50 @@
+.btn {
+    text-decoration: none;
+    display: inline-block;
+
+    &--commodity {
+        text-align: center;
+        display: block;
+        font-size: 24px;
+        padding: 15px 0;
+        background: $color-primary-article;
+    }
+    &--bkGreen {
+        background: $color-primary-article;
+    }
+    &--bkWhite {
+        background: $color-white;
+    }
+    &--yellow {
+        background: $color-primary-yellow;
+    }
+    &--pay {
+        display: block;
+        font-size: 24px;
+        padding: 15px 0;
+        text-align: center;
+        background: $color-primary-yellow;
+        color: $color-primary-greenDark;
+    }
+    &--operation {
+        font-size: 18px;
+        padding: 12px 18px;
+        box-shadow: 0 0 1px #000;
+        color: $color-primary-greenDark;
+    }
+
+    &--checkSuccess {
+        display: block;
+        color: $color-primary-greenDark;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 18px 0;
+        margin: 0 33%;
+
+        @include respon('mobile-small') {
+            margin: 0;
+        }
+    }
+
+}

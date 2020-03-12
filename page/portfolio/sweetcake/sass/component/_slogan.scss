@@ -1,0 +1,38 @@
+.slogan {
+    &__title {
+        writing-mode: vertical-rl;
+        margin: auto;
+        letter-spacing: 12px;
+    }
+    &__line {
+        display: block;
+        position: relative;
+        &:nth-child(1) {
+            top: -18px;
+        }
+        &:nth-child(2) {
+            span {
+                position: absolute;
+                right: -10px;
+            }
+        }
+    }
+
+    @include respon('mobile') {
+        &__title {
+            writing-mode: initial;
+            text-align: center;
+            font-size: 24px;
+        }
+        &__line {
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2) {
+                span {
+                    position: initial;
+                }
+            } 
+        }
+    }
+}

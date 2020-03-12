@@ -1,0 +1,40 @@
+.section-title {
+    &__txt {
+        text-align: center;
+
+        &--photo {
+            margin-bottom: 60px;
+            
+        }
+        p {
+            color: #999;
+        }
+
+        @include respon(phone) {
+            &--photo {
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+    &__title {
+        &--middlebanner {
+            color: #fff;
+            text-shadow: 6px 6px 6px rgba(0,0,0,.6);
+        }
+        &--photo {
+            color: rgba(0,0,0,.9);
+        }
+        &::before {
+            content: '';
+            display: block;
+            margin: 21px 33%;
+            height: 1.5px;
+
+            background: #999;
+        }
+    }
+}

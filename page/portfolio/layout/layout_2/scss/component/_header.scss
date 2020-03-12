@@ -1,0 +1,118 @@
+.header {
+    overflow: hidden;
+
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     clear: both;
+    // }
+    padding: 15px 0;
+    // background: rgba(0,0,0,.3);
+    &__logo {
+        color: #fff;
+        font-size: 24px;
+        padding-left: 30px;
+        &-box {
+            float: left;
+            width: 100%;
+            // margin-right: -150px;
+        }
+    }
+
+    &__menu {
+
+        float: left;
+        margin-left: -120px;
+
+
+
+        &__checkbox {
+            display: none;
+        }
+        &__label {
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        &__list {
+            
+            &-container {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                background: rgba(0,0,0,.75);
+                padding: 30px 12px 0;
+                
+                transform: translateX(100%);
+                transition: all .6s;
+
+                &__label {
+                    position: absolute;
+                    top: 18px;
+                    right: 30px;
+                    &::after,&::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 3px;
+                        height: 12px;
+                        background: #fff;
+                        transform-origin: 50% 50%;
+                        cursor: pointer;
+                    }
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                    &:before {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+            &__item {
+                position: relative;
+
+                & + &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    height: 0;
+                    padding: .6px 0;
+                    background: #777;
+
+                    // border: 1px solid #fff;
+                    
+                    // height: 1px;
+                    // background: #fff;
+                }
+
+                // & + & {
+                //     border-top: 1px solid #777;
+                // }
+            }
+            &__link {
+                &:link,&:visited {
+                    text-decoration: none;
+                    color: #777;
+                    font-size: 24px;
+                    
+                    // display: inline-block;
+                    display: block;
+                    padding: 12px 180px 12px 0;
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        &__checkbox:checked ~ &__list-container {
+            transform: translateX(0);
+        }
+
+
+    }
+}

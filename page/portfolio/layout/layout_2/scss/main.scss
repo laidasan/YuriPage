@@ -1,0 +1,21 @@
+@import "abstracts/animation";
+@import "abstracts/mixins";
+@import "abstracts/variable";
+
+
+
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+
+
+@import "component/header";
+@import "component/banner";
+@import "component/footer";
+@import "component/btn";
+@import "component/learn";
+@import "component/photo";
+@import "component/section-title";
+
+
+@import "page/home";

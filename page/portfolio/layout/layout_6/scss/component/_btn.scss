@@ -1,0 +1,18 @@
+.btn {
+    &:link,&:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 9px 21px;
+    }
+    
+    &--primary {
+        border: 1.5px solid #f56a6a;
+        box-shadow: 0 0 3px inset rgba(218, 50, 50,.6);
+        color: #f56a6a;
+        border-radius: 6px;
+    }
+    &--banner {
+        text-transform: uppercase;
+    }
+}

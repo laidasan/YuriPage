@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="https://kit.fontawesome.com/ab4c3d994d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>checkout</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header__logo"></div>
+        <div class="header__navigation">
+            <nav class="header__nav">
+                <a href="index.html" class="header__nav__link">首頁</a>
+                <a href="product.html" class="header__nav__link">甜點</a>
+                <a href="login.html" class="header__nav__link">登入</a>
+                <div class="header__nav__cancel"></div>
+            </nav>
+        </div>
+        <a href="cart.html" class="header__icon"><i class=" fas fa-shopping-cart"></i></a>
+    </div>
+    <section class="checkout">
+        <div class="checkout-trans">
+            <div class="checkout-trans__dress">
+                <div class="checkout-trans__circles checkout-trans__circles--now"></div>
+                <div class="checkout-trans__circles checkout-trans__circles--notfinished"></div>
+                <div class="checkout-trans__circles checkout-trans__circles--notfinished"></div>
+                <div class="checkout-trans__line"></div>
+            </div>
+            <h3 class="heading-thread checkout-trans__title">運送</h3>
+            <form class="checkout-trans__form">
+                <div class="checkout-trans__form__wrap checkout-trans__form__wrap--2-1">
+                    <label for="firstname" class="checkout-trans__form__label">姓氏</label>
+                    <input type="text" name="" id="firstname" class="checkout-trans__form__input" placeholder="王">
+                </div>
+                <div class="checkout-trans__form__wrap checkout-trans__form__wrap--2-1">
+                    <label for="secondname" class="checkout-trans__form__label">名字</label>
+                    <input type="text" name="" id="secondname" class="checkout-trans__form__input" placeholder="小明">
+                </div>
+                <div class="checkout-trans__form__wrap">
+                    <label for="cellphone" class="checkout-trans__form__label">電話</label>
+                    <input type="tel" name="cellphone" id="cellphone" class="checkout-trans__form__input checkout-trans__form__input--tel" pattern="[0-9]{4}-[0-9]{6}" placeholder="0000-000000">
+                </div>
+                <div class="checkout-trans__form__wrap">
+                    <label for="City" class="checkout-trans__form__label">地址</label>
+                    <div class="checkout-trans__form__selectGroup">
+                        <select class="checkout-trans__form__select" name="" id="City">
+                            <option value="高雄市">高雄市</option>
+                            <option value="南投市">南投市</option>
+                            <option value="台北市">台北市</option>
+                        </select>
+                    </div>
+                    <div class="checkout-trans__form__selectGroup">
+                        <select class="checkout-trans__form__select" name="" id="town">
+                            <option value="高雄市">高雄市</option>
+                            <option value="南投市">南投市</option>
+                            <option value="台北市">台北市</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="checkout-trans__form__wrap">
+                    <input type="text" name="address" id="address" class="checkout-trans__form__input" placeholder="鄉鎮">
+                </div>
+                <!-- <button class="checkout-trans__form__submit">Next</button> -->
+                <a href="checkoutPay.html" class="checkout-trans__form__submit">Next</a>
+            </form>
+        </div>
+        <div class="checkout-info">
+            <div class="checkout__pay">
+                <h3 class="heading-thread checkout__pay__title">訂單摘要</h3>
+                <div class="checkout__pay__wrap checkout__pay__commodityTotalMoney">
+                    <span>小計</span>
+                    <span>NT$ 2,700</span>
+                </div>
+                <div class="checkout__pay__wrap checkout__pay__transMoney">
+                    <span>運費</span>
+                    <span>NT$ 300</span>
+                </div>
+                <div class="checkout__pay__wrap checkout__pay__totalMoney">
+                    <span>總計</span>
+                    <span>NT$ 3000</span>
+                </div>
+            </div>
+            <div class="checkout__buyingList">
+                <h3 class="heading-thread checkout__buyingList__title">購物清單</h3>
+                <ul class="checkout__buyingList__list">
+                    <li class="checkout__buyingList__item">
+                        <div class="checkout__buyingList__item__imgbox"><img src="../img/image/commodity/cake_1.jfif" alt="" class="checkout__buyingList__item__img"></div>
+                        <div class="checkout__buyingList__item__txt">
+                            <span class="checkout__buyingList__item__name">焦糖馬卡龍</span>
+                            <span class="checkout__buyingList__item__money">NT$ 900</span>
+                        </div>
+                    </li>
+                    <li class="checkout__buyingList__item">
+                        <div class="checkout__buyingList__item__imgbox"><img src="../img/image/commodity/cake_1.jfif" alt="" class="checkout__buyingList__item__img"></div>
+                        <div class="checkout__buyingList__item__txt">
+                            <span class="checkout__buyingList__item__name">焦糖馬卡龍</span>
+                            <span class="checkout__buyingList__item__money">NT$ 900</span>
+                        </div>
+                    </li>
+                    <li class="checkout__buyingList__item">
+                        <div class="checkout__buyingList__item__imgbox"><img src="../img/image/commodity/cake_1.jfif" alt="" class="checkout__buyingList__item__img"></div>
+                        <div class="checkout__buyingList__item__txt">
+                            <span class="checkout__buyingList__item__name">焦糖馬卡龍</span>
+                            <span class="checkout__buyingList__item__money">NT$ 900</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="contact">
+            <div class="contact-container">
+                <div class="contact__text">
+                    <img src="../img/logo/logo-light.svg" alt="" class="contact__logo">
+                    <h3 class="heading-thread contact__span">訂閱你我的甜蜜郵件</h3>
+                </div>
+                <form action="" class="contact-form">
+                    <label for="email" class="contact__label">
+                        <i class="fas fa-envelope contact__emailIcon"></i>
+                    </label>
+                    <input type="email" name="email" id="email" class="contact__email">
+                    <button class="contact__btn"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-content">
+            <img src="../img/logo/logotype-lg-dark.svg" alt="" class="footer__logo">
+            <div class="footer-content__info">
+                <span class="footer-content__info__phone">07-1234-5678</span>
+                <span class="footer-content__info__mail">sweetaste@gmail.com</span>
+                <span class="footer-content__info__address">800 高雄市新興區幸福路 520號</span>
+            </div>
+            <h3 class="heading-thread u-color-primaryDark footer__slogan">
+                <span class="footer__slogan__line">今天是個——</span>
+                <span class="footer__slogan__line">吃甜點的好日子 <span>。</span></span>
+            </h3>
+            <ul class="footer__socialList">
+                <li class="footer__socialItem"><img src="../img/icon/ic-facebook.svg" alt="" class="footer__socialIcon"></li>
+                <li class="footer__socialItem"><img src="../img/icon/ic-line@.svg" alt="" class="footer__socialIcon"></li>
+            </ul>
+            <span class="footer__copyright">&copy; 2018 Sweetaste* All Rights Reserved</span>
+        </div>
+    </footer>
+    <script src="../js/header.js"></script>
+    <script src="../js/checkout.js"></script>
+    <script>
+        console.log('cool');
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+.contact {
+    // justify-content: space-around;
+    
+    &-container {
+        //兩欄寫法1
+        // display: flex;
+        // justify-content: space-between;
+
+        // margin: 0 120px;
+        overflow: hidden;
+    }
+    &__text {
+        //兩欄寫法2
+        float: left;
+        margin-right: 15%;
+        //
+
+        line-height: 40px;
+
+        color: $color-white;
+        padding: 8px 0;
+    }
+    &__logo {
+        width: 40px;
+        float: left;
+    }
+    &__span {
+        margin-left: 60px;
+    }
+
+
+
+    //form
+    &-form {
+        //兩欄寫法2
+        //BFC 清出浮動
+        overflow: hidden;
+        //
+        // padding: 15px 21px;
+        font-size: 0;
+        // height: 0;
+        display: flex;
+        // background: $color-white;
+        justify-content: flex-end;
+    }
+
+
+    &__label {
+        // padding: 8px 0 8px 15px;
+        background: $color-white;
+    }
+    &__emailIcon {
+        color: $color-primary-greenDark;
+        padding: 15px 0 0 15px;
+        margin: auto;
+        font-size: 24px;
+        background: $color-white;
+    }
+    &__email{
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding: 11px;
+
+    }
+    &__btn {
+        // padding: 0 39px ;
+        padding: 8px 15px;
+        border: none;
+        background: $color-primary-yellow;
+        position: relative;
+        font-size: 24px;
+        color: $color-primary-greenDark;
+    }
+
+    @include respon('desktop') {
+        &__text {
+            margin-right: 9%;
+        }
+    }
+    @include respon('mobile') {
+        &__text {
+            float: none;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        &__logo {
+            float: none;
+        }
+        &__span {
+            font-size: 24px;
+            margin-left: 21px;
+            // text-align: center;
+        }
+        &-form {
+            //第一種方法
+            // margin: 30px calc((100% - 360px) / 2) 0;
+            //第二種方法
+            margin: 30px 0 0;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.btn {
+    &:link,&:visited {
+        display: inline-block;
+        padding: 6px 15px;
+        text-decoration: none;
+        font-size: 21px;
+    }
+    &--gray {
+        color: rgba(0,0,0,.9);
+        box-shadow: 0 0 0 3px rgba(0,0,0,.3);
+        &:hover {
+            background: #eee;
+        }
+        @include respon(landscape) {
+            &:hover {
+                background: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.copyright {
+    font-size: 21px;
+    display: inline-block;
+    color: $color-black;
+    letter-spacing: 12px;
+
+    &__name {
+        color: $color-primary;
+    }
+}

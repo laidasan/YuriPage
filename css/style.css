@@ -68,6 +68,10 @@
   .primary-sub {
     font-size: 3.6rem; } }
 
+.heading-fourth {
+  font-size: 3rem;
+  font-weight: 500; }
+
 .u-display-none {
   display: none; }
 
@@ -136,7 +140,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
+  height: 100vh;
+  background: #222222; }
   .loading-container {
     position: relative; }
     .loading-container::after {
@@ -215,20 +220,25 @@
 
 .sample-container {
   display: flex;
-  margin: 0 6%;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 0 3%;
+  font-size: 0; }
 
 .sample__wrap {
   position: relative;
-  max-width: 300px;
-  min-width: 300px;
-  box-shadow: 0 0 0 1px #cd0000; }
+  text-align: right;
+  width: 30%;
+  margin: calc(10% / 6);
+  box-shadow: 0 0 0 1px #222222;
+  transition: all .3s;
+  border-radius: 6px;
+  cursor: pointer; }
+  .sample__wrap:hover {
+    background: #7AFEC6; }
 
 .sample__img-box {
   position: relative;
-  height: 240px; }
+  height: 210px; }
 
 .sample__img {
   vertical-align: middle;
@@ -244,11 +254,52 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #cd0000;
+    background: #01baef;
     visibility: visible; }
 
 .sample__txt {
-  padding: 1.5rem .6rem; }
+  text-align: left;
+  padding: 0 .6rem 3.6rem;
+  transition: all .3s; }
+  .sample__txt__title {
+    padding: 1.2rem 0; }
+  .sample__txt__intro {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    line-height: 1.2; }
+  .sample__txt__list {
+    list-style-type: disc;
+    padding-left: 1.5rem; }
+    .sample__txt__listItem {
+      font-size: 1.8rem;
+      margin: .75rem 0; }
+
+.sample__readmore:link, .sample__readmore:visited {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #222222;
+  padding: 1.2rem 1.8rem;
+  box-shadow: 0 0 0 1px #222222;
+  margin: 0 .9rem .9rem 0;
+  border-radius: 6px;
+  transition: all .3s; }
+
+.sample__readmore:hover {
+  background: #0a2342;
+  color: #fff;
+  box-shadow: none; }
+
+@media only screen and (max-width: 600px) {
+  .sample__wrap {
+    width: 75%;
+    margin: 0 auto 2.1rem; } }
+
+@media only screen and (max-width: 720px) and (min-width: 600px) {
+  .sample__wrap {
+    width: 45%; } }
 
 .main {
   height: 100vh;

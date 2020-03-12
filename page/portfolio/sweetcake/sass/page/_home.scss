@@ -1,0 +1,86 @@
+.header {
+    padding: 3.6% 5%;
+    // padding: 36px 50px;
+}
+.banner {
+    position: relative;
+    padding: 360px 0;
+    margin: 0 5% 0px;
+    
+    &--home{
+        margin-bottom: 330px;
+    }
+
+
+
+    &--product {
+        // margin-bottom: 150px;
+    }
+
+    @include respon('desktop') {
+        padding: 240px 0;
+        &--home {
+            margin-bottom: 270px;
+        }
+    }
+
+
+    @include respon('mobile') {
+        &--home {
+            margin: 0 0 240px;
+        }
+    }
+}
+
+.article {
+    & + & {
+        margin-top: 120px;
+    }
+    padding: 60px 6%;
+    position: relative;
+    background: $color-primary-article;
+    @include respon('mobile') {
+        padding: 0;
+        background: $color-white;
+
+        & + & {
+            margin-top: 192px;
+        }
+    }
+}
+
+.slogan {
+    padding: 120px 0;
+
+    @include respon('mobile') {
+        padding: 30px 0;
+        margin-top: 192px;
+    }
+}
+
+.commodity {
+    padding: 60px 5%;
+    @include respon('mobile') {
+        padding: 0 0 36px;
+    }
+}
+
+.contact {
+    // padding: 36px 120px;
+    // padding: 36px 120px;
+    padding: 36px 12%;
+    background: $color-primary-greenDark;
+    @include respon('desktop') {
+        padding: 36px 6%;
+    }
+    @include respon('mobile') {
+        padding: 36px 0;
+    }
+}
+.footer {
+    // padding: 36px 120px;
+    @include respon('mobile') {
+        padding: 15px 0;
+        padding: 0;
+    }
+}

@@ -1,0 +1,52 @@
+.erat {
+    // overflow: hidden;
+    &-wrap {
+        float: left;
+        width: 42%;
+        margin-bottom: 60px;
+        padding-left: 3%;
+        &:nth-child(even) {
+            margin-right: 3%;
+        }
+    }
+
+    &__txt {
+        margin-left: 120px;
+        &__title {
+            color: #333;
+        }
+        &__article {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #999;
+        }
+    }
+
+
+    &__icon-box {
+        float: left;
+        width: 90px;
+        height: 90px;
+        text-align: center;
+        line-height: 90px;
+        position: relative;
+        top: 10px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border: 3px solid #ccc;
+            transform: rotate(45deg);
+        }
+    }
+    &__icon {
+        color: $color-primary;
+        font-size: 51px;
+        vertical-align: middle;
+    }
+}

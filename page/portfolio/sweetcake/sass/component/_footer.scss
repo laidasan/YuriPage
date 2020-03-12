@@ -1,0 +1,108 @@
+.footer {
+
+    &-content {
+        // display: flex;
+        // align-items: space-between;
+        position: relative;
+        overflow: hidden;
+
+        padding: 36px 12%;
+        &__info {
+            color: $color-primary-greenDark;
+            font-family: 'Noto Serif TC', serif;
+            font-size: 21px;
+            margin-bottom: 30px;
+            span {
+                display: block;
+            }
+            &__phone {
+                
+            }
+
+            &__email {
+
+            }
+            &__address {
+
+            }
+        }
+        
+    }
+
+    // &__logo-box {
+    //     width: 170px;
+    //     height: 30px;
+    //     margin-bottom: 120px;
+    // }
+    &__logo {
+        height: 40px;
+        margin-bottom: 120px;
+    }
+
+
+    &__slogan {
+        position: absolute;
+        writing-mode: vertical-rl;
+        top: 36px;
+        left: 0;
+        bottom: 0;
+        right: 6%;
+
+        &__line {
+            display: block;
+            position: relative;
+
+            &:nth-child(1) {
+                top: -15px;
+            }
+            &:nth-child(2) {
+                span {
+                   position: absolute; 
+                   right: -10px;
+                }
+            }
+        }
+    }
+
+    &__social {
+        &List {
+            // padding: 0 12%;  
+            float: left;
+            font-size: 0;
+        }
+        &Item {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        &Icon {
+            height: 40px;
+            width: 40px;
+            // @extend %img;
+        }
+    }
+    &__copyright {
+        display: block;
+        text-align: right;
+        font-size: 18px;
+        color: $color-primary-greenLight;
+    }
+
+    @include respon('mobile') {
+        &__social {
+            &List {
+                float: none;
+                margin-bottom: 24px;
+            }
+        }
+
+        &__copyright {
+            display: inline;
+        }
+        
+        &__slogan {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+}

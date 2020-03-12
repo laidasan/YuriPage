@@ -1,0 +1,31 @@
+.menubtn {
+    &__checkbox {
+        display: none;
+
+        &:checked ~ .page-left {
+            transform: translate(0);
+        }
+        &:checked ~ .page-main {
+            width: 69%;
+            padding: 0 5%;
+            margin-left: 0;
+        }
+        &:checked ~ .page-main .banner__img-box {
+            height: 450px;
+        }
+    }
+    &__label {
+        display: block;
+        position: relative;
+        left: -5%;
+        border-top: 3px solid #fc5a5a;
+        border-bottom: 3px solid #fc5a5a;
+        padding: 6px 0px;
+        width: 27px;
+        height: 3px;
+        margin: 12px 12px;
+        background: #fc5a5a;
+        background-clip: content-box;
+        cursor: pointer;
+    }
+}

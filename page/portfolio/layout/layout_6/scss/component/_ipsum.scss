@@ -1,0 +1,50 @@
+.ipsum {
+    &-wrap {
+        float: left;
+        width: 42%;
+        // padding: 0 30px;
+        padding: 30px 3%;
+        // margin-bottom: 45px;
+        position: relative;
+        // overflow: hidden;
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     height: 1px;
+        //     background: #999;
+        // }
+        &:nth-child(even)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 1px;
+            background: #999;
+        }
+    }
+    &__img-box {
+        height: 300px;
+        margin-bottom: 15px;
+        // margin-right: 5%;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+    &__txt {
+        // overflow: hidden;
+        &__article {
+            padding: 30px 0;
+            color: #aaa;
+            font-size: 18px;
+            letter-spacing: .5px;
+            line-height: 1.2;
+        }
+    }
+}

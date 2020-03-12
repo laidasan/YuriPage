@@ -1,0 +1,14 @@
+{
+  "name": "sweetcake",
+  "version": "1.0.0",
+  "description": "for sweetcake practice",
+  "main": "index.js",
+  "scripts": {
+    "watch:css": "node-sass sass/main.scss style/style.css -w"
+  },
+  "author": "Yuri",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

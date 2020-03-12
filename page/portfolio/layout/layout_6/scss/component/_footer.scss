@@ -1,0 +1,44 @@
+.footer {
+    padding: 0 30px;
+    &__info {
+
+    }
+    &__wrap {
+        padding: 15px 0;
+    }
+    &__mail {
+        &:link,&:visited {
+            text-decoration: none;
+            font-size: 15px;
+            color: #333;
+            border-bottom: 1px dashed #333333;
+
+            transition: all .15s;
+        }
+        &:hover {
+            color: #fc5a5a;
+            border-color: #fc5a5a;
+        }
+    }
+
+    &__icon-box {
+        float: left;
+        padding: 0 12px 15px 0;
+    }
+    &__icon {
+        font-size: 18px;
+        color: #fc5a5a;
+    }
+
+    &__address {
+        overflow: hidden;
+    }
+
+    &__copyright {
+        display: block;
+        padding: 60px 0;
+        font-size: 15px;
+        color: #999;
+        border-top: 1.5px solid #999;
+    }
+}
