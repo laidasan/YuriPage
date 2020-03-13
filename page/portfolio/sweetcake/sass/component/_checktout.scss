@@ -5,6 +5,7 @@
     @include respon('mobile-small')  {
         padding: 0;
     }
+    
     &-trans {
         padding: 21px 36px 0 36px;
         float: left;
@@ -321,6 +322,7 @@
     }
     
     &-info {
+        width: 100%;
         max-width: 40%;
         margin:0 0 0 auto;
         overflow: hidden;

@@ -1,14 +1,24 @@
 .slogan {
     &__title {
+
+        writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
         margin: auto;
         letter-spacing: 12px;
+
+        //支援IE
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 125px;
     }
     &__line {
         display: block;
         position: relative;
         &:nth-child(1) {
             top: -18px;
+
         }
         &:nth-child(2) {
             span {

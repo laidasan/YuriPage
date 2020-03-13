@@ -42,6 +42,8 @@
 
     &__slogan {
         position: absolute;
+        writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
         top: 36px;
         left: 0;

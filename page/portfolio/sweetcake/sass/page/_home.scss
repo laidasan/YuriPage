@@ -36,6 +36,14 @@
     & + & {
         margin-top: 120px;
     }
+
+    //支援IE才用max-height，再chrome vertical-lr or vertical-rl時
+    //本身高度依然由內容決定，IE則會自然100%填充高度(跟水平流寬度時一樣概念)
+    //max-height來限制IE高度用的
+    //IE edge直接設在了article-txt上了
+    // height: 272px;
+    // max-height: 272px;
+    
     padding: 60px 6%;
     position: relative;
     background: $color-primary-article;
@@ -50,8 +58,11 @@
 }
 
 .slogan {
-    padding: 120px 0;
+    //支援IE
+    height: 380px;
+    position: relative;
 
+    padding: 120px 0;
     @include respon('mobile') {
         padding: 30px 0;
         margin-top: 192px;

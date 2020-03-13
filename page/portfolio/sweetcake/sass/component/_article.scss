@@ -23,13 +23,36 @@
 
     &-txt {
         position: relative;
-        -webkit-writing-mode: vertical-lr;
-        writing-mode: tb-lr;
-        writing-mode: vertical-rl;
+        max-height: 300px;
+        // height: 100%;
+        //不支援IE時
+        // -webkit-writing-mode: vertical-rl;
+        // writing-mode: vertical-rl;
 
         
         &--right {
-            margin: 0 0 0 auto;
+            writing-mode: tb-rl;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+            width: 100%;
+            
+
+            & > p {
+                margin-right: 81%;
+            }
+
+            //不支援IE時
+            // margin: auto 0 0 auto;
+        }
+        &--left {
+            writing-mode: tb-rl;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+
+
+            & > h1 {
+                margin-right: -81%;
+            }
         }
     }
     
@@ -40,7 +63,7 @@
         z-index: 1;
         color: $color-primary-greenDark;
         &__line {
-            display: inline-block;
+            display: block;
         }
         &--firstline {
             position: relative;
@@ -58,10 +81,13 @@
     }
 
     &__content {
-        margin-right: 81%;
         font-family: 'Noto Serif TC', serif;
         font-weight: 600;
         color: $color-primary-greenLight;
+
+        //不支援IE時
+        // margin-right: 81%;
+        
 
         &__line {
             display: block;
@@ -83,9 +109,9 @@
         }
 
         &-txt {
+            writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
             writing-mode: initial;
-            -webkit-writing-mode: vertical-lr;
-
         }
 
         &__title {

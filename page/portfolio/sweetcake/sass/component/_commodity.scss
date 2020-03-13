@@ -1,6 +1,7 @@
 .commodity {
     &-container {
         display: flex;
+        // overflow: hidden;
         justify-content: space-around;
     }
 
@@ -16,12 +17,19 @@
         //one-row-threeItem
         &--1-3 {
             max-width: 31%;
+            margin: calc(7% / 6);
+
+            //IE
+            width: 31%;
         }
 
         //one-row-twoItem
         &--1-2 {
             max-width: 48%;
             margin-bottom: 24px;
+
+            //IE
+            width: 48%;
         }
     }
 
