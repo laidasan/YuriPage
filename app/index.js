@@ -1,4 +1,5 @@
 ;(() => {
+    // require('@babel/polyfill')
     const $welcomeStrs = ['Hi,I Am Yuri','Welcome To My Home',`Today is ${getToday(new Date().getDay())}`]
     const $bannerTitle = document.querySelector('.banner__title');
     const $bannerTitleStr = $bannerTitle.querySelector('span');

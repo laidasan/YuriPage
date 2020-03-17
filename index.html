@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="sass/vendor/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./app/universal.js"></script>
+    <script src="./dist/module.js"></script>
+    <script src="./dist/universal.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Yuri Home</title>
 </head>
-<body>
+<body class="u-body-overflow-hidden">
     <div class="loading" title="loading...">
         <div class="loading-container" title="loading..."><div class="loading--cube"></div></div>
     </div>
@@ -19,7 +20,7 @@
             <a href="#" class="choose" data-page="0"></a>
             <a href="#" data-page="1"></a>
         </nav>
-        <div class="main-page">
+        <div class="main-page main-banner">
             <header class="header">
                 <nav class="header__nav">
                     <a href="https://paper.dropbox.com/folder/show/javascript-Note-e.1gg8YzoPEhbTkrhvQwJ2zznR0E9lA6CmiYISY5HBbBcyr4ZYvW2K" class="header__nav__link u-border-white u-color-white">Note</a>
@@ -35,9 +36,24 @@
                 <div class="banner__timeline"></div>
             </div>
         </div>
-        <div class="main-page intro">intro</div>
+
+
+        <div class="main-page main-intro intro">
+            <div class="intro-wrap intro-about">
+                <div class="intro__img-box"><img alt="about" class="intro__img"></div>
+                <div class="intro__txt">
+                    <p class="intro__content">自我介紹</p>
+                </div>
+            </div>
+            <div class="intro-wrap intro-world">
+                <div class="intro__img-box"><img alt="world" class="intro__img"></div>
+                <div class="intro__txt">
+                    <p class="intro__content">價值觀</p>
+                </div>
+            </div>
+        </div>
     </main>
-    <script src="./app/index.js"></script>
-    <script src="./app/scroll.js"></script>
+    <script src="./dist/index.js"></script>
+    <script src="./dist/scroll.js"></script>
 </body>
 </html>

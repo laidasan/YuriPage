@@ -1,10 +1,20 @@
+html {
+    //for IE
+    // overflow-y: scroll;
+    // overflow: hidden;
+}
 :root {
     font-size: 62.5%;
     font-family: 'Ubuntu', sans-serif;
+
+    // overflow-y: auto;
+    // overflow-x: hidden;
+
+    body {
+        // position: absolute;
+    }
 }
-
-
-
 body {
-    // background: $color-primary-Black;
+    // width: 100vw;
+    // overflow: hidden;
 }

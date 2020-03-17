@@ -87,6 +87,11 @@
 .u-border-black {
   border-color: #222222; }
 
+.u-body-overflow-hidden {
+  position: absolute;
+  width: 100vw;
+  overflow: hidden; }
+
 .header {
   perspective: 90rem; }
   .header__nav {
@@ -125,7 +130,7 @@
       .header__nav__link:hover::after {
         padding: .1rem 36%; }
   .header + .banner {
-    margin-top: -6.6rem; }
+    margin-top: -7.78rem; }
   @media only screen and (max-width: 600px) {
     .header__nav {
       padding-right: 0;
@@ -195,8 +200,45 @@
       display: none; } }
 
 .intro {
-  height: 100vh;
-  background: #fff; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .intro-wrap {
+    overflow: hidden;
+    padding: 1.2rem 0; }
+  .intro__img-box {
+    float: left;
+    position: relative;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    overflow: hidden; }
+    .intro__img-box img:not([src]) {
+      visibility: hidden; }
+    .intro__img-box img::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #222222;
+      visibility: visible; }
+    .intro__img-box img::after {
+      content: attr(alt);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      margin: 0 auto;
+      color: #fff;
+      font-size: 21px;
+      line-height: 24rem;
+      visibility: visible; }
+  .intro__content {
+    font-size: 1.8rem; }
 
 .banner {
   background: #222222;
@@ -228,7 +270,7 @@
   position: relative;
   text-align: right;
   width: 30%;
-  margin: calc(10% / 6);
+  margin: calc(9% / 6);
   box-shadow: 0 0 0 1px #222222;
   transition: all .3s;
   border-radius: 6px;
@@ -264,15 +306,23 @@
   .sample__txt__title {
     padding: 1.2rem 0; }
   .sample__txt__intro {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
-    line-height: 1.2; }
+    line-height: 1.5; }
   .sample__txt__list {
     list-style-type: disc;
     padding-left: 1.5rem; }
     .sample__txt__listItem {
       font-size: 1.8rem;
       margin: .75rem 0; }
+  .sample__txt__link:link, .sample__txt__link:visited {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #cd0000;
+    transition: all .3s;
+    font-weight: 800; }
+  .sample__txt__link:hover {
+    color: orange; }
 
 .sample__readmore:link, .sample__readmore:visited {
   position: absolute;
@@ -309,8 +359,8 @@
     position: relative;
     height: 100vh;
     transition: all 1s; }
-  .main--main {
-    background: #222222; }
+  .main-intro {
+    padding: 0 6%; }
   .main--sample {
     background: #f0f0f0; }
     .main--sample > .header::after {

@@ -16,3 +16,11 @@
 .u-border-black  {
     border-color: $color-primary-Black;
 }
+
+
+//for ie
+.u-body-overflow-hidden {
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+}

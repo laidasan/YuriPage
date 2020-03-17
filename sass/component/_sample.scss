@@ -10,7 +10,7 @@
         position: relative;
         text-align: right;
         width: 30%;
-        margin: calc(10% / 6);
+        margin: calc(9% / 6);
         box-shadow: 0 0 0 1px $color-primary-Black;
         transition: all .3s;
         border-radius: 6px;
@@ -53,9 +53,10 @@
             padding: 1.2rem 0;
         }
         &__intro {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            // font-size: 1.8rem;
             letter-spacing: 2px;
-            line-height: 1.2;
+            line-height: 1.5;
         }
 
 
@@ -67,6 +68,20 @@
             &Item {
                 font-size: 1.8rem;
                 margin: .75rem 0;
+            }
+        }
+
+        &__link {
+            &:link,
+            &:visited {
+                text-decoration: none;
+                font-size: 1.8rem;
+                color: $color-link-novisited;
+                transition: all .3s;
+                font-weight: 800;
+            }
+            &:hover {
+                color: orange;
             }
         }
     }

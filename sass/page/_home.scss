@@ -1,4 +1,5 @@
 .main {
+    // width: 100vw;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -8,10 +9,17 @@
         height: 100vh;
         transition: all 1s;
     }
-
-    &--main {
-        background: $color-primary-Black;
+    &-intro {
+        padding: 0 6%;
     }
+
+    // &-banner {
+    //     padding-top: 3rem;
+    // }
+
+    // &--main {
+    //     background: $color-primary-Black;
+    // }
     &--sample {
         background: $color-gray-light;
 

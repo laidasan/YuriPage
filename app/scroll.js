@@ -1,6 +1,8 @@
 ;(() => {
+    // require('@babel/polyfill')
     const $scrollContainer = document.querySelector('.scrollContainer');
-    const $mainPages = document.querySelectorAll('.main-page');
+    let $mainPages = document.querySelectorAll('.main-page');
+    $mainPages = $mainPages.forEach ? $mainPages : Array.from($mainPages);
     const $pageDirect = document.querySelector('.page-direct');
     const $pageDirectOptions = $pageDirect.querySelectorAll('a');
     console.log($pageDirectOptions)
@@ -34,14 +36,22 @@
             thispage++;
 
             $mainPages.forEach((page) => {
-                page.style.setProperty('transform',`translateY(-${100 * thispage}%)`);
+                page.style.setProperty('transform',`translateY(-${100 * thispage}%)`)
             })
+            // $mainPages.forEach ? $mainPages.forEach((page) => {
+            //     page.style.setProperty('transform',`translateY(-${100 * thispage}%)`)
+            // }) : Array.from($mainPages).forEach(page => {
+            //     page.style.setProperty('transform',`translateY(-${100 * thispage}%)`)
+            // })
+
             directOptionStyle(thispage,viewup);
         }
     }
     function pageDirectDesk(e) {
         let target = e.target;
-        if(target.matches('a')) {
+        //ie 有matches，但方法名稱是msMatchesSelector
+        let ismatch = target.matches ? target.matches('a') : target.msMatchesSelector('a')
+        if(ismatch) {
             e.preventDefault();
             let nextpage = target.dataset['page'];
             console.log(nextpage)
@@ -71,6 +81,7 @@
 
 
     if(window.onload) {
+        console.log('window onload')
         const old = window.onload;
         window.onload = () => {
             console.log(old.then(result => {
@@ -102,6 +113,7 @@
             }))
         }
     }else {
+        console.log('init onload')
         window.onload = universal['indexLading']().then(result => {
             return new Promise((resolve,reject) => {
                 window.addEventListener('mousewheel',scrollPage);
