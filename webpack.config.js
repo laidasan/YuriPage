@@ -4,7 +4,7 @@ module.exports = {
     mode: 'development',
     entry: {
         // module:'./app/module.js',
-        // Index:'./app/index.js',
+        // index:'./app/index.js',
         scroll: './app/scroll.js',
         // universal: './app/universal.js'
     },
