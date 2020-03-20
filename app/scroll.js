@@ -70,7 +70,6 @@
                 thispage = nextpage;
             }
 
-
         }
     }
     function pageDirectMobile() {

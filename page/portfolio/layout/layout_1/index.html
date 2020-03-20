@@ -1,45 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <title>PageCover</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>Layout Practice</title>
 </head>
+
 <body>
-    <div class="pagecover">
-        <div class="pagecover__container">
-            <div class="pagecover__txt">
-                <h4 class="heading-fourth">NEXT SONG IN 2:08</h4>
-                <h1 class="heading-main">Now Playing:</h1>
-                <h2 class="heading-secondary">Artist: Aarson Espe</h2>
-                <h2 class="heading-secondary">Song: Wonder</h2>
+    <div class="header">
+        <div class="header__logo-box"></div>
+        <nav class="header__navigation">
+            <a href="#" class="header__navigationLink">About</a>
+            <a href="#" class="header__navigationLink">How To Work</a>
+            <a href="#" class="header__navigationLink">What</a>
+            <a href="#" class="header__navigationLink">Listen</a>
+            <a href="#" class="header__navigationLink"></a>
+        </nav>
+    </div>
+    <div class="banner">
+        <div class="banner__video">
+        </div>
+        <div class="banner-txt">
+            <h3 class="heading-thread">浪費糧食</h3>
+            <h3 class="heading-thread">正在全球發生</h3>
+            <span>我們能為台灣這塊土地做些什麼?</span>
+        </div>
+        <div class="banner__editor">
+            <span>卡卡洛特</span>
+            <span>貝吉達</span>
+            <span>特南克斯</span>
+            <span>龜先生</span>
+        </div>
+        <a href="#who" class="banner__scroll"></a>
+    </div>
+    <section class=" section section--who" id="who">
+        <div class="who__logoBox"><img src="./logoColor.png" alt="" class="who__logoImg"></div>
+        <div class="who__container">
+            <div class="who__imgWrap">
+                <div class="who__img-box open"><img src="./who--food.jpg" class="who__img"></div>
+                <div class="who__img-box"><img src="./who--refreger.jpg" class="who__img"></div>
+                <div class="who__img-box"><img src="./who--editor.jpg" class="who__img"></div>
             </div>
-            <div class="pagecover__subscribe">
-                <div class="pagecover__subscribe-wrap">
-                    <div class="pagecover__subscribe__circle">$3</div>
-                    <div class="pagecover__subscribe__txt">
-                        <h3 class="heading-thread">Supporter</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae quaerat perspiciatis veritatis, aliquid id reiciendis excepturi error.</p>
-                    </div>
+            <div class="who__intro">
+                <h4 class="heading-fourth who__intro__title">
+                    台灣每年丟棄食物的總儲量為180頓，這些被浪費的食物總量，原本可以是230,000名學童20年的營養午餐。
+                </h4>
+                <p>
+                    這些被浪費的食物，不僅是個人資源浪費，也形成許多環境、經濟、 飢荒分配不均的問題，在無形中影響了我們的生活。 南機場的「分享冰箱」，讓吃不完的食物送到需要的人手中，
+                    從珍惜食物開始，邀您加入共享行動，讓下一代從我們行為中看見榜樣， 看見值得學習、尊敬的榜樣
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section section--how">
+        <h3 class="heading-thread how__title section__title"><span>如何</span>運作</h3>
+        <div class="how__process">
+            <div class="how__process-container">
+                <div class="how__process__item">
+                    <h4 class="heading-fourth how__process__itemName">載貨</h4>
+                    <a href="#" class="btn btn--howProcess choose" data-index="0">1</a>
                 </div>
-                <div class="pagecover__subscribe-wrap">
-                    <div class="pagecover__subscribe__circle">$3</div>
-                    <div class="pagecover__subscribe__txt">
-                        <h3 class="heading-thread">Supporter</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae quaerat perspiciatis veritatis, aliquid id reiciendis excepturi error.</p>
-                    </div>
+                <div class="how__process__item">
+                    <h4 class="heading-fourth how__process__itemName">冷藏</h4>
+                    <a href="#" class="btn btn--howProcess" data-index="1">2</a>
                 </div>
-                <div class="pagecover__subscribe-wrap">
-                    <div class="pagecover__subscribe__circle">$3</div>
-                    <div class="pagecover__subscribe__txt">
-                        <h3 class="heading-thread">Supporter</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae quaerat perspiciatis veritatis, aliquid id reiciendis excepturi error.</p>
-                    </div>
+                <div class="how__process__item">
+                    <h4 class="heading-fourth how__process__itemName">整理</h4>
+                    <a href="#" class="btn btn--howProcess" data-index="2">3</a>
+                </div>
+                <div class="how__process__item">
+                    <h4 class="heading-fourth how__process__itemName">上架</h4>
+                    <a href="#" class="btn btn--howProcess" data-index="3">4</a>
+                </div>
+                <div class="how__process__item">
+                    <h4 class="heading-fourth how__process__itemName">發放</h4>
+                    <a href="#" class="btn btn--howProcess" data-index="4">5</a>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="how-videoContainer">
+            <div class="how-video">
+                <iframe height="450" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="how-video">
+                <iframe height="450" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="how-video">
+                <iframe height="450" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="how-video">
+                <iframe height="450" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="how-video">
+                <iframe height="450" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- <div class="player" id="player_0"></div>
+            <div class="player" id="player_1"></div>
+            <div class="player" id="player_2"></div>
+            <div class="player" id="player_3"></div>
+            <div class="player" id="player_4"></div> -->
+
+            <!-- https://www.youtube.com/embed/eMATXtRnKOM?autoplay=1&showinfo=0&mute=1&loop=1&playlist=eMATXtRnKOM&enablejsapi=1&origin=https%3A%2F%2Ficguanyu.github.io&widgetid=5 -->
+        </div>
+    </section>
+    <section class="seciton-result">
+        <h3 class="heading-thread result__title section__title"><span>運作</span>成果</h3>
+        <div class="result-container">
+            <div class="result__map">
+                <ul class="result__map__towns">
+                    <li class="result__map__town choose">
+                        <h4 class="heading-fifth result__map__townName">忠勤里</h4>
+                        <div class="result__map__point"></div>
+                    </li>
+                    <li class="result__map__town">
+                        <h4 class="heading-fifth result__map__townName">永昌里</h4>
+                        <div class="result__map__point"></div>
+                    </li>
+                    <li class="result__map__town">
+                        <h4 class="heading-fifth result__map__townName">螢圃里</h4>
+                        <div class="result__map__point"></div>
+                    </li>
+                    <li class="result__map__town">
+                        <h4 class="heading-fifth result__map__townName">頂東里</h4>
+                        <div class="result__map__point"></div>
+                    </li>
+                    <li class="result__map__town">
+                        <h4 class="heading-fifth result__map__townName">林興里</h4>
+                        <div class="result__map__point"></div>
+                    </li>
+                    <li class="result__map__town">
+                        <h4 class="heading-fifth result__map__townName">新營里</h4>
+                        <div class="result__map__point"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="result__detail">
+                <nav class="result__detail__direct">
+                    <a href="#" class="result__detail__direct__btn detail__prev">&lt;</a>
+                    <a href="#" class="result__detail__direct__btn detail__next">&gt;</a>
+                </nav>
+                <div class="result__slide">
+                    <div class="result__data-container">
+                        <div class="result__data">
+                            <div class="result__data__txt">
+                                <h2 class="heading-secondary result__data__txt__townName">【 忠勤里 】</h2>
+                                <span class="result__data__txt__address">中正區中華路二段 307巷42號</span>
+                                <h4 class="heading-fourth">已提供</h4>
+                                <h3 class="result__data__txt__weight">21469.7<span>kg</span></h3>
+                                <h5 class="heading-fifth">※截至2018年3月為止</h5>
+                            </div>
+                            <div class="result__data__img"></div>
+                        </div>
+                        <div class="result__data">
+                            <div class="result__data__txt">
+                                <h2 class="heading-secondary result__data__txt__townName">【 永昌里 】</h2>
+                                <span class="result__data__txt__address">中正區中華路二段 307巷42號</span>
+                                <h4 class="heading-fourth">已提供</h4>
+                                <h3 class="result__data__txt__weight">2795.6<span>kg</span></h3>
+                                <h5 class="heading-fifth">※截至2018年3月為止</h5>
+                            </div>
+                            <div class="result__data__img"></div>
+                        </div>
+                        <div class="result__data">
+                            <div class="result__data__txt">
+                                <h2 class="heading-secondary result__data__txt__townName">【 螢圃里 】</h2>
+                                <span class="result__data__txt__address">中正區中華路二段 307巷42號</span>
+                                <h4 class="heading-fourth">已提供</h4>
+                                <h3 class="result__data__txt__weight">2544<span>kg</span></h3>
+                                <h5 class="heading-fifth">※截至2018年3月為止</h5>
+                            </div>
+                            <div class="result__data__img"></div>
+                        </div>
+                        <div class="result__data">
+                            <div class="result__data__txt">
+                                <h2 class="heading-secondary result__data__txt__townName">【 頂東里 】</h2>
+                                <span class="result__data__txt__address">中正區中華路二段 307巷42號</span>
+                                <h4 class="heading-fourth">已提供</h4>
+                                <h3 class="result__data__txt__weight">2609.5<span>kg</span></h3>
+                                <h5 class="heading-fifth">※截至2018年3月為止</h5>
+                            </div>
+                            <div class="result__data__img"></div>
+                        </div>
+                        <div class="result__data">
+                            <div class="result__data__txt">
+                                <h2 class="heading-secondary result__data__txt__townName">【 林興里 】</h2>
+                                <span class="result__data__txt__address">中正區中華路二段 307巷42號</span>
+                                <h4 class="heading-fourth">已提供</h4>
+                                <h3 class="result__data__txt__weight">2566.5<span>kg</span></h3>
+                                <h5 class="heading-fifth">※截至2018年3月為止</h5>
+                            </div>
+                            <div class="result__data__img"></div>
+                        </div>
+                        <div class="result__data">
+                            <div class="result__data__txt">
+                                <h2 class="heading-secondary result__data__txt__townName">【 新營里 】</h2>
+                                <span class="result__data__txt__address">中正區中華路二段 307巷42號</span>
+                                <h4 class="heading-fourth">已提供</h4>
+                                <h3 class="result__data__txt__weight">2607.8<span>kg</span></h3>
+                                <h5 class="heading-fifth">※截至2018年3月為止</h5>
+                            </div>
+                            <div class="result__data__img"></div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="result__detail__nav">
+                    <a href="#" class="result__detail__nav__circle choose"></a>
+                    <a href="#" class="result__detail__nav__circle"></a>
+                    <a href="#" class="result__detail__nav__circle"></a>
+                    <a href="#" class="result__detail__nav__circle"></a>
+                    <a href="#" class="result__detail__nav__circle"></a>
+                    <a href="#" class="result__detail__nav__circle"></a>
+                </nav>
+            </div>
+
+        </div>
+        <div class="result-container result-container--create">
+            <div class="result__create">
+                <h4 class="heading-secondary result__create__title">冰箱分布</h4>
+                <h3 class="heading-thread result__create__data">0</h3>
+                <h4 class="heading-secondary">據點</h4>
+            </div>
+            <div class="result__create">
+                <h4 class="heading-secondary result__create__title">創造續食</h4>
+                <h3 class="heading-thread result__create__data">0</h3>
+                <h4 class="heading-secondary">公斤</h4>
+            </div>
+        </div>
+    </section>
+    <section class="section section--news">
+        <h4 class="heading-fourth news__sectionTitle">媒體報導</h4>
+        <div class="news-container">
+            <div class="news-wrap">
+                <div class="news__img"></div>
+                <h4 class="heading--foruth news__title">轉角遇見愛 「食享冰箱」滿月分享近噸食物</h4>
+                <div class="news-txt">
+                    <p class="news-txt__article">為了減少食物浪費，量販店龍頭家樂福與台北市臻佶祥社會服務協會合作，在北市南機場社區創辦全台第一家續食餐廳「書屋花甲」，...</p>
+                    <span class="news-txt__time">2016.10.04</span>
+                </div>
+                <a href="#" class="btn btn--readmore">閱讀更多</a>
+            </div>
+            <div class="news-wrap">
+                <div class="news__img"></div>
+                <h4 class="heading--foruth news__title">里長伯也惜食 「食享冰箱」自己拿</h4>
+                <div class="news-txt">
+                    <p class="news-txt__article">惜食運動需要大家一起來，台北市中正區忠勤里里長方荷生2年前發起「食享冰箱」，收集當日賣相不好或賣不完的麵包、蔬果等食材...</p>
+                    <span class="news-txt__time">2016.10.04</span>
+                </div>
+                <a href="#" class="btn btn--readmore">閱讀更多</a>
+            </div>
+            <div class="news-wrap">
+                <div class="news__img"></div>
+                <h4 class="heading--foruth news__title">量販續食計畫 年減205噸食物浪費</h4>
+                <div class="news-txt">
+                    <p class="news-txt__article">台灣每年有將近400萬噸食物浪費，量販店家樂福近2年來投入續食計畫，至今每年可減少近196噸食物浪費，昨（12日）起與...</p>
+                    <span class="news-txt__time">2016.10.04</span>
+                </div>
+                <a href="#" class="btn btn--readmore">閱讀更多</a>
+            </div>
+            <div class="news-wrap">
+                <div class="news__img"></div>
+                <h4 class="heading--foruth news__title">食享冰箱、物資募集做公益 取用物資要酌量</h4>
+                <div class="news-txt">
+                    <p class="news-txt__article">家樂福大賣場支持台北市中正區忠勤里長方荷生設立「食享冰箱」，也在高雄賣場設物資募集車，每天把物資轉給實物銀行。食享冰箱...</p>
+                    <span class="news-txt__time">2016.10.04</span>
+                </div>
+                <a href="#" class="btn btn--readmore">閱讀更多</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section--hr">
+        <h3 class="heading-thread section--hr__title">「我在乎的，只有食物不浪費。」</h3>
+    </section>
+
+
+    <section class="section section-boss">
+        <h3 class="heading-thread boss__title section__title">里長<span>的話</span></h3>
+        <div class="boss-txt">
+            <p class="boss-txt__article">
+                <span class="boss-txt__article__part">不分身分別，需要的人都可以拿！食享冰箱是一個分享，我們把好的東西分享給人家，</span>
+                <span class="boss-txt__article__part">我們不是救濟，透過分享發現更多真正需要幫助的人。</span>
+                <span class="boss-txt__article__part">任何的物資進到南機場食物銀行、樂活園地，我們都能充分的利用這些物資，再給這些食物一次機會。</span>
+            </p>
+        </div>
+        <div class="boss-videoContain">
+            <div class="boss-videoContain__playOutSide">
+                <div class="boss-videoContain__playMask"></div>
+                <div class="boss-videoContain__playInSide"></div>
+            </div>
+        </div>
+        <div class="boss-hiddenVideo">
+            <div class="boss-hiddenVideo__cancel"></div>
+            <div id="player" class="player"></div>
+            <!-- <iframe height="315" width="560" frameborder="0" src="https://www.youtube.com/embed/aTgyZJvWa_s" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div>
+    </section>
+
+
+    <section class="section--hr">
+        <h3 class="heading-thread section--hr__title">
+            <span>食物不浪費，再給食物一次機會</span>
+            <span>共同為我們的社會盡一份心力</span>
+        </h3>
+    </section>
+
+    <section class="section section--joinus">
+        <h3 class="heading-thread joinus__title section__title">邀您<span>一起</span></h3>
+        <div class="joinus-slogan">
+            <div class="joinus-slogan__img"></div>
+            <div class="joinus-slogan__txt">
+                <h4 class="heading-fourth joinus-slogan__txt__title">
+                    <span>食物不浪費，再給食物一次機會</span>
+                    <span>共同為我們的社會盡一份心力</span>
+                </h4>
+            </div>
+        </div>
+        <div class="joinus-content">
+            <h4 class="heading-fourth">如果您是大台北地區麵包、烘焙等店長、老闆：</h4>
+            <ol class="joinus-content__list">
+                <li class="joinus-content__listItem">常有許多商品賣不完。</li>
+                <li class="joinus-content__listItem">覺得丟廚餘浪費，卻又不知道怎麼辦。</li>
+                <li class="joinus-content__listItem">也想為環保、社會盡一份心力。</li>
+            </ol>
+        </div>
+        <div class="joinus-concat">
+            <div class="joinus-concat__infoWrap joinus-concat__infoWrap--mail">
+                <div class="joinus-concat__info joinus-concat__info--mail">
+                    <h2 class="heading-fourth joinus-concat__info__title">歡迎賴信詢問</h2>
+                    <span>Yuri@gmail.com</span>
+                </div>
+            </div>
+            <div class="joinus-concat__infoWrap joinus-concat__infoWrap--phone">
+                <div class="joinus-concat__info joinus-concat__info--phone">
+                    <h2 class="heading-fourth joinus-concat__info__title">歡迎賴信詢問</h2>
+                    <span>Yuri@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <nav class="footer__direct">
+            <a href="#">食享冰箱</a>
+            <a href="#">如何運作</a>
+            <a href="#">運作成果</a>
+            <a href="#">里長的話</a>
+            <a href="#">邀您一起</a>
+        </nav>
+        <h4 class="heading-fourth footer__copyright">社團法人臺北市臻佶祥社會服務處&emsp;臺北市中正區忠勤里辦公處&emsp;臺北市中正區南機場社區發展協會&emsp;臺北市中正社區大學</h4>
+    </footer>
+
+
+    <script src="./source/index.js"></script>
+    <!-- <div id="player"></div> -->
+    <script src="source/loadvideo.js"></script>
+    <!-- <script src="./source/youtubeapi.js"></script> -->
 </body>
+
 </html>
