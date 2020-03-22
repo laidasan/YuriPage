@@ -54,7 +54,12 @@
 
     }
     &__content {
+        overflow: hidden;
         font-size: 1.8rem;
+        text-indent: 3rem;
+        line-height: 1.5;
+        letter-spacing: .3rem;
+        margin-left: 30rem;
     }
     
 

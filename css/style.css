@@ -238,7 +238,12 @@
       line-height: 24rem;
       visibility: visible; }
   .intro__content {
-    font-size: 1.8rem; }
+    overflow: hidden;
+    font-size: 1.8rem;
+    text-indent: 3rem;
+    line-height: 1.5;
+    letter-spacing: .3rem;
+    margin-left: 30rem; }
 
 .banner {
   background: #222222;
