@@ -21,7 +21,7 @@
             background: #cd0000;
         }
     }
-    @include respond(phone) {
+    @include respond(big-mobile) {
         display: none;
     }
 }

@@ -62,7 +62,7 @@
   font-size: 5.1rem;
   font-weight: 600; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 990px) {
   .primary-main {
     font-size: 4.2rem; }
   .primary-sub {
@@ -99,6 +99,9 @@
   position: absolute;
   width: 100vw;
   overflow: hidden; }
+  @media only screen and (max-width: 990px) {
+    .u-body-overflow-hidden {
+      overflow-y: scroll; } }
 
 .header {
   perspective: 90rem; }
@@ -139,7 +142,7 @@
         padding: .1rem 36%; }
   .header + .banner {
     margin-top: -7.78rem; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 990px) {
     .header__nav {
       padding-right: 0;
       text-align: center; }
@@ -147,7 +150,9 @@
         padding: .6rem .9rem;
         margin: 0 .9rem; }
       .header__nav__link:not(:last-child) {
-        margin-right: 0; } }
+        margin-right: 0; }
+    .header + .banner {
+      margin-top: -6.6rem; } }
 
 .loading {
   display: flex;
@@ -203,7 +208,7 @@
     margin: 1.2rem 0; }
   .page-direct > a.choose {
     background: #cd0000; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 990px) {
     .page-direct {
       display: none; } }
 
@@ -270,6 +275,24 @@
     font-weight: 600; }
     .intro__content--left {
       margin-right: 24rem; }
+  @media only screen and (max-width: 990px) {
+    .intro {
+      display: block; }
+      .intro-wrap {
+        padding: 3rem 0; }
+      .intro__img-box {
+        float: none;
+        width: 18rem;
+        height: 18rem;
+        margin: auto;
+        overflow: auto; }
+      .intro__txt {
+        overflow: auto; }
+        .intro__txt--left {
+          float: none;
+          width: auto; }
+      .intro__content--left {
+        margin: 0; } }
 
 .banner {
   background: #222222;
@@ -373,7 +396,7 @@
   color: #fff;
   box-shadow: none; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 990px) {
   .sample__wrap {
     width: 75%;
     margin: 0 auto 2.1rem; } }
@@ -402,3 +425,8 @@
       margin: 0 6%;
       background: #222222;
       background-clip: content-box; }
+  @media only screen and (max-width: 990px) {
+    .main {
+      height: auto; }
+      .main-page {
+        height: auto; } }

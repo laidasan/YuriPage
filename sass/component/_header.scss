@@ -58,7 +58,7 @@
         margin-top: -7.78rem;
     }
 
-    @include respond(phone) {
+    @include respond(big-mobile) {
         // margin: auto 0;
 
         &__nav {
@@ -79,6 +79,12 @@
                 }
             }
         }
+
+        & + .banner {
+            margin-top: -6.6rem;
+        }
     }
+
+    
 
 }

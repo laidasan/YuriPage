@@ -33,4 +33,12 @@
             background-clip: content-box;
         }
     }
+
+    @include respond(big-mobile) {
+        height: auto;
+        &-page {
+            height: auto;
+
+        }
+    }
 }

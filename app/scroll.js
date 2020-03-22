@@ -5,10 +5,14 @@
     $mainPages = $mainPages.forEach ? $mainPages : Array.from($mainPages);
     const $pageDirect = document.querySelector('.page-direct');
     const $pageDirectOptions = $pageDirect.querySelectorAll('a');
+    const $bigMobileWidth = 990
     console.log($pageDirectOptions)
     let lastpage = 0;
     let thispage = 0;
     let isScrolling = false;
+    let isMouseWheelListener = false;
+    let isMobile = false
+
     
 
     function scrollPage(e) {
@@ -72,10 +76,57 @@
 
         }
     }
-    function pageDirectMobile() {
 
+    
+    function throttle(fn,cycle) {
+        let timeout = null
+        let looptime = cycle || 60
+        return function() {
+            let context = this
+            let args = arguments
+            if(!timeout) {
+                timeout = setTimeout(() => {
+                    fn.call(context,args)
+                    timeout = null
+                },looptime)
+            }
+        }
+    }
+    
+    function pageDiretInit() {
+        if(window.innerWidth >= $bigMobileWidth && !isMobile) {
+            window.addEventListener('mousewheel',scrollPage)
+            isMouseWheelListener = true
+        }
     }
 
+
+    function pageDirectControl(e) {
+        console.log('resize')
+        console.log(window.innerWidth)
+        window.innerWidth < $bigMobileWidth && isMouseWheelListener ? 
+            (() => {
+                console.log('remove mousewheel listener')
+                window.removeEventListener('mousewheel',scrollPage)
+                isMouseWheelListener = false
+                $mainPages.forEach(page => {
+                    page.style.setProperty('transform','translateY(0)')
+                })
+            })() : ''
+        window.innerWidth >= $bigMobileWidth && !isMouseWheelListener && !isMobile ? 
+        (() => {
+            console.log('add mousewheel listener')
+            window.addEventListener('mousewheel',scrollPage)
+            isMouseWheelListener = true
+            $mainPages.forEach(page => {
+                page.style.setProperty('transform','translateY(0)')
+            })
+            $pageDirectOptions.forEach(option => option.classList.remove('choose'))
+            $pageDirectOptions[0].classList.add('choose')
+            thispage = 0
+            lastpage = 0
+        })() : ''
+    }
 
 
 
@@ -97,11 +148,19 @@
                         // })
                         $pageDirect.style.setProperty('display','none');
                         document.querySelector('.main').style.setProperty('overflow','auto');
+                        isMouseWheelListener = false
+                        isMobile = true
 
                     }else {
                         console.log(result)
                         $pageDirect.addEventListener('click',pageDirectDesk)
-                        window.addEventListener('mousewheel',scrollPage);
+
+                        pageDiretInit();
+                        // window.addEventListener('mousewheel',scrollPage);
+                        
+                        //new feature
+                        window.addEventListener('resize',throttle(pageDirectControl))
+
                         $mainPages[0].addEventListener('transitionend',(e) => {
                             console.log('change isScrolling')
                             isScrolling = false;
@@ -115,11 +174,17 @@
         console.log('init onload')
         window.onload = universal['indexLading']().then(result => {
             return new Promise((resolve,reject) => {
-                window.addEventListener('mousewheel',scrollPage);
+                pageDiretInit();
+                // window.addEventListener('mousewheel',scrollPage);
+                        
+                //new feature
+                window.addEventListener('resize',throttle(pageDirectControl))
+
                 $mainPages[0].addEventListener('transitionend',(e) => {
                     console.log('change isScrolling')
                     isScrolling = false;
                 })
+                resolve('loading sucess')
             })
         })
     }

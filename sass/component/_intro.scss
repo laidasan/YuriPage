@@ -7,12 +7,6 @@
         overflow: hidden;
         // padding: 12rem 0;   
     }
-    
-    &-about {
-    }
-    &-world {
-
-    }
 
     &__img-box {
         float: left;
@@ -90,4 +84,33 @@
     }
     
 
+
+    @include respond(big-mobile) {
+        display: block;
+
+        &-wrap {
+            padding: 3rem 0;
+        }
+        &__img-box {
+            float: none;
+            width: 18rem;
+            height: 18rem;
+            margin: auto;
+            overflow: auto;
+        }
+
+        &__txt {
+            overflow: auto;
+            &--left {
+                float: none;
+                width: auto;
+            }
+        }
+        
+        &__content {
+            &--left {
+                margin: 0;
+            }
+        }
+    }
 }

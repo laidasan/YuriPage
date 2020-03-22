@@ -128,7 +128,7 @@
     //     background: $color-primary-Purple;
     // }
 
-    @include respond(phone) {
+    @include respond(big-mobile) {
         &__wrap {
             width: 75%;
             margin: 0 auto 2.1rem;

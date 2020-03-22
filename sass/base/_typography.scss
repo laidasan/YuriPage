@@ -9,7 +9,7 @@
         font-weight: 600;
     }
 
-    @include respond(phone) {
+    @include respond(big-mobile) {
         &-main {
             font-size: 4.2rem;
         }
