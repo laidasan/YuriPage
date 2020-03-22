@@ -4,7 +4,8 @@
     let $mainPages = document.querySelectorAll('.main-page');
     $mainPages = $mainPages.forEach ? $mainPages : Array.from($mainPages);
     const $pageDirect = document.querySelector('.page-direct');
-    const $pageDirectOptions = $pageDirect.querySelectorAll('a');
+    let $pageDirectOptions = $pageDirect.querySelectorAll('a');
+    $pageDirectOptions = $pageDirectOptions.forEach ? $pageDirectOptions : Array.from($pageDirectOptions);
     const $bigMobileWidth = 990
     console.log($pageDirectOptions)
     let lastpage = 0;
@@ -103,7 +104,6 @@
 
     function pageDirectControl(e) {
         console.log('resize')
-        console.log(window.innerWidth)
         window.innerWidth < $bigMobileWidth && isMouseWheelListener ? 
             (() => {
                 console.log('remove mousewheel listener')
