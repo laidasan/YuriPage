@@ -5,6 +5,9 @@
     const $bannerTitleStr = $bannerTitle.querySelector('span');
     const $bannerTitleCursor = $bannerTitle.querySelector('.banner__titleCursor');
     const $bannerTimeline = document.querySelector('.banner__timeline');
+    const $imgSrcs = ['./img/indexpage/me.jpg']
+    const $imgElements = document.querySelectorAll('img')
+    console.log($imgElements)
     let $timers = [];
     
     let now = 0; let running = true;
@@ -58,6 +61,8 @@
     }
 
     bannerTimeline();
+
+    //titel write animation
     function bannerTitleAni() {
         if($bannerTitleStr.textContent !== $welcomeStrs[now] && running) {
             let str = $bannerTitleStr.textContent;
@@ -87,6 +92,18 @@
             }
         }
     }
+
+    function loadingImage() {
+        let img = new Image()
+        img.onload = () => {
+            img.alt = $imgElements[0].alt
+            $imgElements[0].parentElement.replaceChild(img,$imgElements[0])
+        }
+        img.src = $imgSrcs[0]
+    }
+    loadingImage()
+
+    //all of banner string animations
     function bannerStrAni() {
         createInterval(bannerTitleCursorAni,750);
         createInterval(bannerTimeline,1000);
