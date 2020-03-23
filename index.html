@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="sass/vendor/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./dist/module.js"></script>
-    <script src="./dist/universal.js"></script>
+    <!-- <script src="./dist/universal.js"></script> -->
+    <script src="./app/universal.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Yuri Home</title>
 </head>
@@ -22,11 +23,11 @@
             <a href="#" data-page="2"></a>
         </nav>
         <div class="main-page main-banner">
-            <header class="header">
+            <header class="header" data-type="desk">
                 <nav class="header__nav">
-                    <a href="https://paper.dropbox.com/folder/show/javascript-Note-e.1gg8YzoPEhbTkrhvQwJ2zznR0E9lA6CmiYISY5HBbBcyr4ZYvW2K" class="header__nav__link u-border-white u-color-white">Note</a>
-                    <a href="./page/portfolio/portfolio.html" class="header__nav__link u-border-white u-color-white">portfiolio</a>
-                    <a href="./page/coolani//coolani.html" class="header__nav__link u-border-white u-color-white">coolani</a>
+                    <a href="https://paper.dropbox.com/folder/show/javascript-Note-e.1gg8YzoPEhbTkrhvQwJ2zznR0E9lA6CmiYISY5HBbBcyr4ZYvW2K" class="header__nav__link u-border-white u-color-white" name="home">Note</a>
+                    <a href="./page/portfolio/portfolio.html" class="header__nav__link u-border-white u-color-white" name="portfolio">portfiolio</a>
+                    <a href="./page/coolani//coolani.html" class="header__nav__link u-border-white u-color-white" name="coolani">coolani</a>
                 </nav>
             </header>
             <div class="banner">
@@ -83,9 +84,10 @@
             </div>
         </div>
     </main>
-    <script src="./dist/indexpage.js"></script>
-    <!-- <script src="./app/index.js"></script> -->
-    <!-- <script src="./app/scroll.js"></script> -->
-    <script src="./dist/scroll.js"></script>
+    <!-- <script src="./dist/indexpage.js"></script> -->
+    <script src="./app/index.js"></script>
+    <script src="./app/scroll.js"></script>
+    <script src="./app/header.js"></script>
+    <!-- <script src="./dist/scroll.js"></script> -->
 </body>
 </html>

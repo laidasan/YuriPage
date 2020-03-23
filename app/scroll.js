@@ -79,20 +79,20 @@
     }
 
     
-    function throttle(fn,cycle) {
-        let timeout = null
-        let looptime = cycle || 60
-        return function() {
-            let context = this
-            let args = arguments
-            if(!timeout) {
-                timeout = setTimeout(() => {
-                    fn.call(context,args)
-                    timeout = null
-                },looptime)
-            }
-        }
-    }
+    // function throttle(fn,cycle) {
+    //     let timeout = null
+    //     let looptime = cycle || 60
+    //     return function() {
+    //         let context = this
+    //         let args = arguments
+    //         if(!timeout) {
+    //             timeout = setTimeout(() => {
+    //                 fn.call(context,args)
+    //                 timeout = null
+    //             },looptime)
+    //         }
+    //     }
+    // }
     
     function pageDiretInit() {
         if(window.innerWidth >= $bigMobileWidth && !isMobile) {
@@ -104,7 +104,7 @@
 
     function pageDirectControl(e) {
         console.log('resize')
-        window.innerWidth < $bigMobileWidth && isMouseWheelListener ? 
+        window.innerWidth < $bigMobileWidth && isMouseWheelListener && !isMobile ? 
             (() => {
                 console.log('remove mousewheel listener')
                 window.removeEventListener('mousewheel',scrollPage)
@@ -128,38 +128,24 @@
         })() : ''
     }
 
-
-
     if(window.onload) {
         console.log('window onload')
         const old = window.onload;
         window.onload = () => {
-            console.log(old.then(result => {
+            old.then(result => {
                 return new Promise((resolve,rejcet) => {
                     if(universal.isMobile(navigator.userAgent)) {
                         console.log('isMobile');
-                        
-                        // let pagesOffsetTop = [];
-                        // $mainPages.forEach((page,index) => {
-                        //     pagesOffsetTop.push(page.offsetTop);
-                        // })
-                        // window.addEventListener('touchmove',(e) => {
-                        //     console.log($mainPages[1].offsetTop);
-                        // })
                         $pageDirect.style.setProperty('display','none');
                         document.querySelector('.main').style.setProperty('overflow','auto');
                         isMouseWheelListener = false
                         isMobile = true
-
                     }else {
                         console.log(result)
                         $pageDirect.addEventListener('click',pageDirectDesk)
 
                         pageDiretInit();
-                        // window.addEventListener('mousewheel',scrollPage);
-                        
-                        //new feature
-                        window.addEventListener('resize',throttle(pageDirectControl))
+                        window.addEventListener('resize',universal.throttle(pageDirectControl))
 
                         $mainPages[0].addEventListener('transitionend',(e) => {
                             console.log('change isScrolling')
@@ -168,16 +154,13 @@
                     }
                     resolve(result);
                 })
-            }))
+            })
         }
     }else {
         console.log('init onload')
         window.onload = universal['indexLading']().then(result => {
             return new Promise((resolve,reject) => {
                 pageDiretInit();
-                // window.addEventListener('mousewheel',scrollPage);
-                        
-                //new feature
                 window.addEventListener('resize',throttle(pageDirectControl))
 
                 $mainPages[0].addEventListener('transitionend',(e) => {
@@ -188,5 +171,6 @@
             })
         })
     }
+
 
 })()

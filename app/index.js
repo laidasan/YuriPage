@@ -5,9 +5,10 @@
     const $bannerTitleStr = $bannerTitle.querySelector('span');
     const $bannerTitleCursor = $bannerTitle.querySelector('.banner__titleCursor');
     const $bannerTimeline = document.querySelector('.banner__timeline');
+
     const $imgSrcs = ['./img/indexpage/me.jpg']
     const $imgElements = document.querySelectorAll('img')
-    console.log($imgElements)
+
     let $timers = [];
     
     let now = 0; let running = true;
@@ -119,17 +120,10 @@
             },1500)
         })
     }
-
     universal['indexLoading'] = loading;
 
-    // loading().then(result => {
-    //     console.log(result);
-    //     window.onload = () => {
-    //         console.log('cool')
-    //     }
-    // })
 
-    window.onload = loading().then(result => {
+    window.onload = loading().then(result => {  
         return new Promise((resolve,reject) => {
             console.log(result);
             document.querySelector('.loading').style.setProperty('display','none');
@@ -137,33 +131,11 @@
             document.querySelector('main').classList.remove('u-display-none');
             bannerTimeline();
             bannerStrAni();
+
+            
             resolve(result);
         })
     },err => {
         console.log(err);
     })
-    
-    // window.onload = () => {
-    //     loading().then(onload => {
-    //         return new Promise((resolve,reject) => {
-    //             console.log(onload);
-    //             document.querySelector('main').classList.remove('u-display-none');
-    //             bannerTimeline();
-    //             bannerStrAni();
-    //             resolve('index prepared');
-    //         })
-    //     },err => {
-    //         console.log(err);
-    //     })
-
-
-        // setTimeout(() => {
-        //     document.querySelector('.loading').style.setProperty('display','none');
-        //     universal.onload = true;
-        //     document.querySelector('main').classList.remove('u-display-none');
-        //     bannerTimeline();
-        //     bannerStrAni();
-        // },1500);
-
-    // }
 })()
