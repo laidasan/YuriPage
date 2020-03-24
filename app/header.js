@@ -4,6 +4,9 @@
     // const $menuItems = document.querySelectorAll('.header__nav__link').forEach ? Array.from(document.querySelectorAll('.header__nav__link')) : document.querySelectorAll('.header__nav__link')
     // let isMobile = universal.isMobile(navigator.userAgent)
     const $mainIntro = document.querySelector('.main-intro')
+    const $spanMenu = document.createElement('span')
+    $spanMenu.textContent = 'Menu'
+
     let text = document.createTextNode('menu')
     text.type = 'text'
     const phoneWidth = 375
@@ -11,13 +14,16 @@
     
     function menuHandler(e) {
         const target = e.target
-        let isHeader = target.matches ? target.matches('.header') : target.className.match('.header')
-        if(isHeader) {
+        // let isHeader = target.matches ? target.matches('.header') : target.className.match('.header')
+        let isMenu = target.matches ? target.matches('span') : target.className.match('span')
+        if(isMenu) {
             console.log('menu open')
             e.preventDefault()
             $headerNav.classList.toggle('header__nav--open')
             $header.classList.toggle('u-color-white')
             $header.classList.toggle('u-color-black')
+        }else {
+            console.log(target)
         }
     }
     
@@ -25,11 +31,14 @@
         if(window.innerWidth < phoneWidth){
             console.log('add eventlistener')
             $header.addEventListener('click',menuHandler)
-            $header.appendChild(text)
+            // $header.appendChild(text)
+            $header.appendChild($spanMenu)
             $header.classList.add('u-color-white')
         }else {
             console.log('none')
-            $header.lastChild.textContent === 'menu' ? $header.removeChild(text) : ''
+            // $header.lastChild.textContent === 'menu' ? $header.removeChild(text) : ''
+            console.log($header.lastChild)
+            $header.lastChild.textContent === 'Menu' ? $header.removeChild($spanMenu) : console.log("doesn't remove span")
             $headerNav.classList.remove('header__nav--open')
         }
     }

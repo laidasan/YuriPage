@@ -97,16 +97,17 @@
         background: $color-white;
         text-align: center;
         font-size: 1.5rem;
-        // color: $color-white;
         line-height: 6rem;
+        letter-spacing: .3rem;
+        cursor: pointer;
 
         z-index: 999;
-        // &::after {
-        //     content: 'Menu';
-        //     color: $color-white;
-        //     font-size: 1.5rem;
-        //     line-height: 6rem;
-        // }
+
+        & > span {
+            position: absolute;
+            left: 0; right:0;
+            top: 0; bottom: 0;
+        }
 
         &__nav {
             padding: 0;
@@ -146,10 +147,13 @@
                     color: $color-white;
                     background: #00cdcd;
                     border-radius: 50%;
-                    // letter-spacing: .1rem;
+                    letter-spacing: .1rem;
                     transition: all .3s cubic-bezier(.07,.17,.87,.31);
                     visibility: visible;
-                    box-shadow: 0 0 0 1px #cd0000;
+                    // box-shadow: 0 0 0 1px #cd0000;
+
+                    //let icon look line text-align: center
+                    padding-left: .24rem;
                 }
                 
 
@@ -181,14 +185,17 @@
              //&__nav__link--open
             &--open &__link {
                 &:nth-child(1)::after {
-                    content: '';
+                    content: '\f015';
                 }
-                &:nth-child(2)::after {
+                &:nth-child(2)::after { 
                     content: '\f0b1';
+                    // padding-left: .24rem;
                     transform: translateY(4.2rem);
                 }
                 &:nth-child(3)::after {
-                    content: '';
+                    // content: '\f863';
+                    content: 'C';
+                    font-size: 3rem;
                     transform: translateY(7.5rem);
                 }
             }
