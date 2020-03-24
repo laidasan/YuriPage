@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/universal.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/header.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/universal.js":
-/*!**************************!*\
-  !*** ./app/universal.js ***!
-  \**************************/
+/***/ "./app/header.js":
+/*!***********************!*\
+  !*** ./app/header.js ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval(";\n\n(function (obj) {\n  // this[obj.name] = obj;\n  window[obj.name] = obj;\n})({\n  name: 'universal',\n  onload: false,\n  // resizeHandlers = {},\n  // onLoadTesk = {},\n  isMobile: function isMobile(userAgent) {\n    var mobiles = ['Android', 'webOS', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'Windows Phone'];\n    return mobiles.some(function (mobile) {\n      return userAgent.match(mobile);\n    });\n  },\n  throttle: function throttle(fn, cycle) {\n    var timeout = null;\n    var looptime = cycle || 60;\n    return function () {\n      var context = this;\n      var args = arguments;\n\n      if (!timeout) {\n        timeout = setTimeout(function () {\n          fn.call(context, args);\n          timeout = null;\n        }, looptime);\n      }\n    };\n  }\n});\n\n//# sourceURL=webpack:///./app/universal.js?");
+eval("(function () {\n  var $header = document.querySelector('.header');\n  var $headerNav = document.querySelector('.header__nav'); // const $menuItems = document.querySelectorAll('.header__nav__link').forEach ? Array.from(document.querySelectorAll('.header__nav__link')) : document.querySelectorAll('.header__nav__link')\n  // let isMobile = universal.isMobile(navigator.userAgent)\n\n  var $mainIntro = document.querySelector('.main-intro');\n  var text = document.createTextNode('menu');\n  text.type = 'text';\n  var phoneWidth = 375;\n\n  function menuHandler(e) {\n    var target = e.target;\n    var isHeader = target.matches ? target.matches('.header') : target.className.match('.header');\n\n    if (isHeader) {\n      console.log('menu open');\n      e.preventDefault();\n      $headerNav.classList.toggle('header__nav--open');\n      $header.classList.toggle('u-color-white');\n      $header.classList.toggle('u-color-black');\n    }\n  }\n\n  function headerInit() {\n    if (window.innerWidth < phoneWidth) {\n      console.log('add eventlistener');\n      $header.addEventListener('click', menuHandler);\n      $header.appendChild(text);\n      $header.classList.add('u-color-white');\n    } else {\n      console.log('none');\n      $header.lastChild.textContent === 'menu' ? $header.removeChild(text) : '';\n      $headerNav.classList.remove('header__nav--open');\n    }\n  }\n\n  function headerScroll() {\n    var windowTop = window.scrollY;\n    var IntroTop = $mainIntro.offsetTop;\n\n    if (windowTop > IntroTop - 40) {\n      $header.style.setProperty('background', '#222222');\n      $header.style.setProperty('color', '#fff');\n    } else {\n      $header.style.removeProperty('background');\n      $header.style.removeProperty('color', '#fff');\n    }\n  }\n\n  function headerHandler(type) {\n    switch (type) {\n      case 'resize':\n        headerInit();\n        break;\n\n      case 'scroll':\n        headerScroll();\n        break;\n    }\n  }\n\n  function headerControl(e) {\n    console.log('header control');\n    e ? e = e['0'] : '';\n    headerHandler(e.type);\n  }\n\n  headerInit();\n  window.addEventListener('resize', universal.throttle(headerControl));\n  window.addEventListener('scroll', universal.throttle(headerControl));\n})();\n\n//# sourceURL=webpack:///./app/header.js?");
 
 /***/ })
 

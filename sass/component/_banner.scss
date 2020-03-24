@@ -14,11 +14,22 @@
         margin-bottom: 3rem;
         & > &Cursor {
             text-shadow: none;
+            // float: right;
+            // font-size: 0;
         }
     }
 
     &__timeline {
         font-size: 2.4rem;
+        text-align: center;
         color: $color-white;
+    }
+
+    @include respond(phone) {
+        &__title {
+            & > &Cursor {
+                display: none;
+            }
+        }
     }
 }

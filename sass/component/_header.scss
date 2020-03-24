@@ -97,7 +97,7 @@
         background: $color-white;
         text-align: center;
         font-size: 1.5rem;
-        color: $color-white;
+        // color: $color-white;
         line-height: 6rem;
 
         z-index: 999;
@@ -134,20 +134,25 @@
                 }
 
                 &::after {
-                    // content: attr(name);
+                    content: '';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
                     padding: 0;
                     left: 0; right: 0;
                     bottom: 0; top: 0;
                     width: auto;
                     height: auto;
-                    font-size: 1.5rem;
+                    font-size: 2.4rem;
                     color: $color-white;
                     background: #00cdcd;
                     border-radius: 50%;
-                    letter-spacing: .1rem;
+                    // letter-spacing: .1rem;
                     transition: all .3s cubic-bezier(.07,.17,.87,.31);
                     visibility: visible;
+                    box-shadow: 0 0 0 1px #cd0000;
                 }
+                
+
 
                 &:hover {
                     box-shadow: none;
@@ -168,38 +173,30 @@
                 &:nth-child(2) {
                     transform: translateX(-5.7rem);
                 }
+                &:nth-child(3) {
+                    transform: translateX(0);
+                }
             }
 
              //&__nav__link--open
             &--open &__link {
+                &:nth-child(1)::after {
+                    content: '';
+                }
                 &:nth-child(2)::after {
+                    content: '\f0b1';
                     transform: translateY(4.2rem);
                 }
                 &:nth-child(3)::after {
+                    content: '';
                     transform: translateY(7.5rem);
                 }
             }
+
         }
-
-
-
-        //&__nav__link--open
-        // &:hover &__nav__link {
-        //     &:nth-child(2)::after {
-        //         transform: translateY(4.2rem);
-        //     }
-        //     &:nth-child(3)::after {
-        //         transform: translateY(7.5rem);
-        //     }
-        // }
 
         & + .banner {
             margin-top: 0;
         }
     }
-
-    
-
-    
-
 }

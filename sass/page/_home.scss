@@ -42,6 +42,9 @@
         }
     }
     @include respond(phone) {
+        &-intro {
+            // padding: 0 3%;
+        }
         &--sample {
             & > .header::after {
                 display: none;

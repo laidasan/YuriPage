@@ -41,7 +41,7 @@
                 text-align: center;
                 margin: 0 auto;
                 color: $color-white;
-                font-size: 21px;
+                font-size: 2.4rem;
                 line-height: 24rem;
                 visibility: visible;
             }
@@ -97,6 +97,12 @@
             height: 18rem;
             margin: auto;
             overflow: auto;
+
+            img {
+                &::after {
+                    line-height: 18rem;
+                }
+            }
         }
 
         &__txt {
@@ -105,12 +111,35 @@
                 float: none;
                 width: auto;
             }
+
+            &--right {
+                padding-left: 0;
+            }
         }
         
         &__content {
             &--left {
                 margin: 0;
             }
+        }
+
+        &-world {
+            display: flex;
+            flex-direction: column;
+
+            & > .intro__txt {
+
+            }
+            & > .intro__img-box {
+                order: -1;
+            }
+        }
+    }
+
+    @include respond(phone) {
+        &__title {
+            text-align: center;
+            margin: 1.2rem;
         }
     }
 }
