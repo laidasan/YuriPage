@@ -15,8 +15,6 @@
                 padding: 1.2rem 1.8rem;
                 text-decoration: none;
                 letter-spacing: .3rem;
-                // color: $color-white;
-                // border: .15rem solid $color-white;
                 border: .15rem solid;
                 border-radius: 10px;
                 
@@ -40,8 +38,6 @@
                 left: 1.8rem;
                 top: 3.3rem;
 
-                // display: block;
-                // margin-top: 3px;
                 height: 0;
                 width: 0;
                 padding: .1rem 0;
@@ -60,7 +56,6 @@
     }
 
     @include respond(big-mobile) {
-        // margin: auto 0;
 
         &__nav {
             padding-right: 0;
@@ -100,21 +95,23 @@
         line-height: 6rem;
         letter-spacing: .3rem;
         cursor: pointer;
-
-        z-index: 999;
+        z-index: 2;
 
         & > span {
+            //because we use js to append span in header,so span is the last one element inside header. => 後來居上
             position: absolute;
+            //z-index:auto => 0  //有定位時，默認的z-index:auto當作z-index:0看，但跟z-index:0不同的是 auto 沒有產生疊層上下文(結界)
             left: 0; right:0;
             top: 0; bottom: 0;
+            user-select: none;
         }
 
         &__nav {
             padding: 0;
             position: absolute;left: 0;right: 0;top: 0;bottom: 0;
+            z-index: 0;  //產生疊層上下文(結界)，讓nav 內層元素的z-index比較限制再nav內
             margin: auto;
             box-shadow: none;
-            z-index: -99;
             &__link {
                 position: absolute;
                 &:link,
@@ -125,8 +122,8 @@
                     border: none;
                     border-radius: 0;
                     left: 0;right: 0;top: 0;bottom: 0;
+                    background: transparent;
 
-                    visibility: hidden;
                     transition: all .3s linear;
                 }
     
@@ -149,8 +146,6 @@
                     border-radius: 50%;
                     letter-spacing: .1rem;
                     transition: all .3s cubic-bezier(.07,.17,.87,.31);
-                    visibility: visible;
-                    // box-shadow: 0 0 0 1px #cd0000;
 
                     //let icon look line text-align: center
                     padding-left: .24rem;
@@ -178,25 +173,43 @@
                     transform: translateX(-5.7rem);
                 }
                 &:nth-child(3) {
-                    transform: translateX(0);
+                    transform: translateX(.1rem);
+                }
+            }
+            &--open &__link,
+            &--openIE &__link {
+                &:nth-child(1)::after {
+                    content: '\f015';
+                }
+                &:nth-child(2)::after {
+                    content: '\f0b1';
+                }
+                &:nth-child(3)::after {
+                    content: 'C';
+                    font-size: 3rem;
                 }
             }
 
              //&__nav__link--open
             &--open &__link {
-                &:nth-child(1)::after {
-                    content: '\f015';
-                }
                 &:nth-child(2)::after { 
-                    content: '\f0b1';
-                    // padding-left: .24rem;
                     transform: translateY(4.2rem);
                 }
                 &:nth-child(3)::after {
-                    // content: '\f863';
-                    content: 'C';
-                    font-size: 3rem;
                     transform: translateY(7.5rem);
+                }
+            }
+
+            &--openIE &__link{
+                //IE 偽元素的translate 吃不到 transition，所以transform都作在主體上(header__van__link)
+                &:first-child {
+                    transform: translateX(-7.5rem) translateY(-2.1rem);
+                }
+                &:nth-child(2) {
+                    transform: translateX(-5.7rem) translateY(4.2rem);
+                }
+                &:nth-child(3) {
+                    transform: translateX(.1rem) translateY(7.5rem);
                 }
             }
 

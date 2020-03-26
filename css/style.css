@@ -167,13 +167,14 @@
       line-height: 6rem;
       letter-spacing: .3rem;
       cursor: pointer;
-      z-index: 999; }
+      z-index: 2; }
       .header > span {
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
-        bottom: 0; }
+        bottom: 0;
+        user-select: none; }
       .header__nav {
         padding: 0;
         position: absolute;
@@ -181,9 +182,9 @@
         right: 0;
         top: 0;
         bottom: 0;
+        z-index: 0;
         margin: auto;
-        box-shadow: none;
-        z-index: -99; }
+        box-shadow: none; }
         .header__nav__link {
           position: absolute; }
           .header__nav__link:link, .header__nav__link:visited {
@@ -196,7 +197,7 @@
             right: 0;
             top: 0;
             bottom: 0;
-            visibility: hidden;
+            background: transparent;
             transition: all .3s linear; }
           .header__nav__link:not(:last-child) {
             margin-right: 0; }
@@ -217,7 +218,6 @@
             border-radius: 50%;
             letter-spacing: .1rem;
             transition: all 0.3s cubic-bezier(0.07, 0.17, 0.87, 0.31);
-            visibility: visible;
             padding-left: .24rem; }
           .header__nav__link:hover {
             box-shadow: none;
@@ -231,16 +231,27 @@
         .header__nav--open .header__nav__link:nth-child(2) {
           transform: translateX(-5.7rem); }
         .header__nav--open .header__nav__link:nth-child(3) {
-          transform: translateX(0); }
-        .header__nav--open .header__nav__link:nth-child(1)::after {
+          transform: translateX(0.1rem); }
+        .header__nav--open .header__nav__link:nth-child(1)::after,
+        .header__nav--openIE .header__nav__link:nth-child(1)::after {
           content: '\f015'; }
+        .header__nav--open .header__nav__link:nth-child(2)::after,
+        .header__nav--openIE .header__nav__link:nth-child(2)::after {
+          content: '\f0b1'; }
+        .header__nav--open .header__nav__link:nth-child(3)::after,
+        .header__nav--openIE .header__nav__link:nth-child(3)::after {
+          content: 'C';
+          font-size: 3rem; }
         .header__nav--open .header__nav__link:nth-child(2)::after {
-          content: '\f0b1';
           transform: translateY(4.2rem); }
         .header__nav--open .header__nav__link:nth-child(3)::after {
-          content: 'C';
-          font-size: 3rem;
           transform: translateY(7.5rem); }
+        .header__nav--openIE .header__nav__link:first-child {
+          transform: translateX(-7.5rem) translateY(-2.1rem); }
+        .header__nav--openIE .header__nav__link:nth-child(2) {
+          transform: translateX(-5.7rem) translateY(4.2rem); }
+        .header__nav--openIE .header__nav__link:nth-child(3) {
+          transform: translateX(0.1rem) translateY(7.5rem); }
       .header + .banner {
         margin-top: 0; } }
 
