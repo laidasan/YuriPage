@@ -6,7 +6,7 @@ module.exports = {
         // module:'./app/module.js',
         // indexpage:'./app/index.js',
         // scroll: './app/scroll.js',
-        // universal: './app/universal.js',
+        universal: './app/universal.js',
         header: './app/header.js'
     },
     output: {

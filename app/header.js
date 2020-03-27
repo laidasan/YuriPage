@@ -6,11 +6,13 @@
     const $spanMenu = document.createElement('span')
     $spanMenu.textContent = 'Menu'
     $spanMenu.setAttribute('name','Menu')
-
+    
     let text = document.createTextNode('menu')
     text.type = 'text'
     const phoneWidth = 375
-
+    let thisPage = universal.checkLocalHref(window.location.href)
+    console.log(universal)
+    console.log(thisPage)
     
     function menuHandler(e) {
         console.log('menu click')
@@ -31,7 +33,12 @@
                     $header.classList.toggle('u-color-white')
                     $header.classList.toggle('u-color-black')
                 }else {
-                    $headerNav.classList.toggle('header__nav--open')
+                    //2020/03/27
+                    //暫時修改成openIE，因為--open製作出來的拋物線效果(x,y移動利用transition-timeing-function不同作出的拋物線效果)
+                    //link與link::after位置會對不上，所以導致點擊link有問題
+                    //日後再添加js製作出的拋物線效果
+                    // $headerNav.classList.toggle('header__nav--open')
+                    $headerNav.classList.toggle('header__nav--openIE')
                     $header.classList.toggle('u-color-white')
                     $header.classList.toggle('u-color-black')
                 }
@@ -68,18 +75,21 @@
             console.log($header.lastChild)
             $header.lastChild.textContent === 'Menu' ? $header.removeChild($spanMenu) : console.log("doesn't remove span")
             $headerNav.classList.remove('header__nav--open')
+            $headerNav.classList.remove('header__nav--openIE')
         }
     }
 
     function headerScroll() {
         let windowTop = window.scrollY
-        let IntroTop = $mainIntro.offsetTop
-        if(windowTop > IntroTop - 40) {
-            $header.style.setProperty('background','#222222')
-            $header.style.setProperty('color','#fff')
-        }else{
-            $header.style.removeProperty('background')
-            $header.style.removeProperty('color','#fff')
+        let IntroTop = $mainIntro ? $mainIntro.offsetTop : 0
+        if(thisPage === 'index.html'){
+            if(windowTop > IntroTop - 40) {
+                $header.style.setProperty('background','#222222')
+                $header.style.setProperty('color','#fff')
+            }else{
+                $header.style.removeProperty('background')
+                $header.style.removeProperty('color','#fff')
+            }
         }
     }
 

@@ -190,6 +190,13 @@
                 }
             }
 
+            &--open &__link--note,
+            &--openIE &__link--note {
+                &:nth-child(1)::after{
+                    content: '\f02d';
+                }
+            }
+
              //&__nav__link--open
             &--open &__link {
                 &:nth-child(2)::after { 

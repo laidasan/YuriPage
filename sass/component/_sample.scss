@@ -140,5 +140,12 @@
             width: 45%;
         }
     }
+    
+    @include respond(phone) {
+
+        &__wrap {
+            width: auto;
+        }
+    }
 
 }

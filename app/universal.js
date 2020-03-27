@@ -23,7 +23,8 @@
                 },looptime)
             }
         }
-    }
+    },
+    checkLocalHref: (href) => href.split('?')[0].split('/').slice(-1).join('')
 })
 
 
