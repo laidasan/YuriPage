@@ -1,0 +1,35 @@
+.composition {
+    position: relative;
+    &__photo {
+        width: 55%; 
+        box-shadow: 0 1.5rem 4.5rem rgba(0,0,0,.4);
+        border-radius: 3px;
+        position: absolute;
+        transition: all .3s;
+        outline-offset: 1.8rem;
+        // z-index: 10;
+        &--p1{
+            top:3rem;
+            left: 0;
+        }
+        &--p2 {
+            top: 6rem;
+            right: 0;
+        }
+        &--p3 {
+            top:12rem;
+            left: 25%;
+        }
+        
+        &:hover {
+            outline: 1.5rem solid $color-primary;
+            transform: scale(1.05) translateY(-.6rem);
+            box-shadow: 0 3rem 7.5rem rgba(0,0,0,.4);
+            z-index: 2;
+        }
+    }
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);   /*一個photo hover時，其他的photo縮小*/
+    }
+
+}

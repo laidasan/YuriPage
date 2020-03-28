@@ -1,0 +1,93 @@
+.story {
+    width: 81%;
+    // margin: 1.2rem auto 0 auto;
+    margin: 0 auto;
+    padding: 1.2rem 3rem;
+    box-shadow: 0 3rem 6rem 0 rgba($color-black,.1);
+    border-radius: 3px;
+    background-color: rgba($color-white,.6);
+    font-size: 1.6rem;
+    transform: skewX(-12deg);
+
+    @include respond(tab-port) {
+        width: 100%;
+    }
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
+    &:not(:first-child) {
+        margin-top: 6rem;
+    }
+    
+    & > * {
+        transform:skewX(12deg);
+
+        @include respond(phone) {
+            transform:skewX(0);
+        }
+    }
+    @include clearfix;
+    &__shape {
+        position: relative;
+        float: left;
+        width: 12rem;
+        height: 12rem;
+        transform: translateX(-2.1rem) skewX(12deg);
+        transition: all .3s;
+        
+        /*fix */
+        overflow: hidden;
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            clip-path: circle(50% at 50% 50%);
+            -webkit-clip-path: circle(50% at 50% 50%);
+
+            /*shape-outside只能搭配的float(浮動物件)使用，效果很像clip-path，可以把下兩行拿掉看看變化*/
+            /*注意文繞圖的部分，即文字與圖片接觸的地方，會有不同*/
+            shape-outside: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+
+            width: 12rem;
+            height: 12rem;
+        }
+        /*fix*/
+
+        @include respond(phone) {
+            transform: translateX(-2.1rem) skewX(0);
+        }
+
+
+        
+        // &:hover .story__caption {
+            //     opacity: 1;
+            //     transform: translate(-50%,-50%);
+            // }
+        }
+        &__img {
+            height: 100%;
+            transform: translateX(-2.7rem) scale(1.5);
+            transition: all .3s;
+        }
+        
+        &__caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,18%);
+            color: $color-white;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.8rem;
+            opacity: 0;
+            transition: all .3s;
+        }
+
+    &:hover &__caption {
+        transform: translate(-50%,-50%);
+        opacity: 1;
+    }
+    &:hover &__img{
+        filter: blur(.9rem) brightness(80%);
+        transform: translateX(-2.7rem) scale(1);
+    }
+}

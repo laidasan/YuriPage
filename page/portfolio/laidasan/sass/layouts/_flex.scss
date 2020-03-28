@@ -1,0 +1,100 @@
+.row {
+    max-width: 75vw;
+    margin: 0 auto;  //置中
+    background: $color-primary;
+    color: $color-white;
+    @include clearfix;
+    
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    
+    // .col-1-of-2,.col-1-of-3 {
+    //     background: red; 
+    //     float: left;
+    //     &:not(:last-child) {
+    //         margin-right: $gutter-horizontial;
+    //     }
+    // }
+    
+    /*[]attrible selector，EX:[alt="Logo"],或是下面的例子*/
+    /* ^= "col-"意思是選擇所有"col-"開頭的*/
+    /* *= "col-"意思是選擇所有擁有"col-"的*/
+    /*  = "col-"意思是選擇所有"col-"結束的*/
+    [class^="col-"] {
+        background: red; 
+        float: left;
+        &:not(:last-child) {
+            margin-right: $gutter-horizontial;
+        }
+    }
+
+    .col-1-of-2 {
+        width: calc( (100% - #{$gutter-horizontial}) /2 );  //在function裡面 要加 #{}
+    }
+    
+    .col-1-of-3 {
+        width: calc( (100% - 2 * #{$gutter-horizontial}) / 3);
+    }
+    .col-2-of-3 {
+        width: calc( 2 * ( (100% - 2 * #{$gutter-horizontial}) / 3 )  + #{$gutter-horizontial} ) ;
+    }
+}
+
+.flex {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 75vw;
+    background: $color-primary;
+    color: $color-white;
+    .col-1-of-3 {
+        width: calc(100% / 3);
+        background: black;
+        &:not(:last-child) {
+            margin-right: 6rem;
+        }
+    }
+}
+
+
+
+.flexbox {
+    display: flex;
+    // background: black;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+    }
+    // border: 3px solid black;
+    &-text {
+        width: 48%;
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+    &-img{
+        width: 48%;
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+}
+.flex-between {
+    justify-content: space-between;
+    // align-items: flex-start;
+}
+.flex-around {
+    justify-content: space-around;
+}
+.flex-center {
+    justify-content: center;
+    // align-items: center;
+}
+.flex-column {
+    flex-direction: column;
+}

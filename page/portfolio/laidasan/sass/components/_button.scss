@@ -1,0 +1,85 @@
+.btn {
+    &,
+    &:link
+    ,&:visited{
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 1.2rem 5.1rem;
+        border-radius: 10rem;
+        font-weight: 400;
+        animation: header-a 1.5s ease .6s; /*name duration animation-timing-function delay*/
+        animation-fill-mode: backwards; /*確實的 style before animation start*/
+        /*比如說這裡的animation有delay.6s秒，且一開始有translateY，就可以確保在animation開始前在正確位置*/
+        transition: all .3s;
+        position: relative;
+        text-decoration: none;
+
+        /*change for <button> element*/
+        border: none;
+        cursor: pointer;
+        // outline: none;
+    }
+    &:hover {
+        box-shadow: 0px 1.2rem 1.2rem 0 #1e8d68;
+        transform: translateY(-0.3rem);
+        &::after {
+            transform: scale(1.5);
+            animation: header-a-hover-after .3s ease ;
+        }
+    }
+    &:active {
+        //  box-shadow: 0px 1.2rem 1.2rem 0 #1e8d68;
+        transform: translateY(-0.1rem);
+    }
+    &:focus {
+        outline: none;
+    }
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    &--white,
+    &--white::after {
+        background: $color-white;
+        color: #000;
+    }
+
+    &--green,
+    &--green::after {
+        background: $color-primary;
+        color: $color-white;
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        text-decoration: none;
+        color: $color-primary;
+        display: inline-block;
+        border-bottom:3px solid $color-primary;
+        padding:3px;
+        transition: all .3s;
+        font-size: 1.6rem;
+    }
+    &:hover {
+        background: $color-primary;
+        color: $color-white;
+        box-shadow: 0 6px 12px $color-grey-dark; 
+        transform: translateY(-2px);
+    }
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 3px 9px $color-grey-dark;
+        // transform: scale(0.9);
+    }
+}

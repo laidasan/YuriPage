@@ -1,0 +1,105 @@
+.form {
+    &__group {
+        margin-top: .9rem;
+        // @include clearfix;
+    }
+    &__input {
+        font-family: inherit;
+        color: inherit;
+        font-size: 1.5rem;
+        padding: 1.5rem 2.1rem;
+        border-radius: 3px;
+        background-color: rgba($color-white,.5);
+        border: none;
+        display: block;
+        width: 90%;
+        transition: all .6s;
+        @include respond(phone) {
+            width: 100%;
+        }
+        
+        &:focus {
+            outline: none;
+            box-shadow: 0 1.5rem 2.4rem 0 rgba($color-black,.15);
+            border-bottom: 3px solid $color-primary-dark;
+            &:invalid {
+                border-bottom: 3px solid $color-secondary-dark;
+            }
+        }
+
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+
+    }
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: block;
+        margin-left: 2.1rem;
+        margin-top: .9rem;
+        transition: all .6s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-3.9rem);
+    }
+
+
+    &__radio {
+
+        &-group {
+            width: 49%;
+            display: inline-block;
+            margin-bottom: 3.6rem;
+            // float: left;
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+
+        &-input {
+            display: none;
+        }
+        
+        &-label {
+            position: relative;
+            font-size: 1.5rem;
+            padding-left: 2.4rem; 
+            cursor: pointer; //let label look like a link
+        }
+
+        &-button {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 1.8rem;
+            width: 1.8rem;
+            border-radius: 100%;
+            border: 3px solid $color-primary-dark;
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: .9rem;
+                width: .9rem;
+                border-radius: 100%;
+                background-color: $color-primary-dark;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                opacity: 0;
+                transition: all .3s;
+            }
+        }
+        &-input:checked ~ &-label &-button::after {
+            opacity: 1;
+        }
+    }
+
+}

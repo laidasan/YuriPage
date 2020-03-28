@@ -1,0 +1,247 @@
+.section-tours__card {
+
+
+    position: relative;
+    width: $width-flexitem-1-of-3;
+    //height: 39rem;  //on notebook computer
+    height:45rem;  //on desktop computer
+    // border: 3px solid black;
+    // transform-style: preserve-3d;
+    perspective: 150rem;
+    -webkit-perspective: 150rem;
+    -moz-perspective: 150rem;
+    transition: all .9s;
+
+    &:hover &-side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &-side--back{
+        transform: rotateY(0deg);
+    }
+
+    
+    &-side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 2.4rem;
+        // color: #fff;
+        // height: 33rem;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4.5rem rgba(black,.15);
+        transition: all 0.9s;
+        
+
+        &--front {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            background-color: #fff;
+            // background:linear-gradient(-120deg,$color-tertiary-light,$color-tertiary-dark);
+            z-index: 1;
+        }
+        
+        &--back {
+            transform: rotateY(180deg);
+            &-1 {
+                background:linear-gradient(-120deg,$color-secondary-light,$color-secondary-dark);
+            }
+            &-2 {
+                background:linear-gradient(-120deg,$color-primary-light,$color-primary-dark);
+            }
+            &-3 {
+                background:linear-gradient(-120deg,$color-tertiary-light,$color-tertiary-dark);
+            }
+        }
+    } 
+    
+    &-picture {
+        background-size: cover;
+        height: 18rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0,100% 0,100% 87%,0% 100%);
+        -webkit-clip-path: polygon(0 0,100% 0,100% 87%,0% 100%);
+        // &-1 {
+        //     background-image:linear-gradient(-120deg,$color-secondary-light,$color-secondary-dark),
+        //     url(../../img/nat-5.jpg);
+        // }
+        // &-2 {
+        //     background-image:linear-gradient(-120deg,$color-primary-light,$color-primary-dark),
+        //     url(../../img/nat-6.jpg);
+            
+        // }
+        // &-3 {
+        //     background-image:linear-gradient(-120deg,$color-tertiary-light,$color-tertiary-dark),
+        //     url(../../img/nat-7.jpg);
+
+        // }
+        &-1 {
+            background-image:linear-gradient(-120deg,$color-secondary-light,$color-secondary-dark),
+            url(../img/nat-5.jpg);
+        }
+        &-2 {
+            background-image:linear-gradient(-120deg,$color-primary-light,$color-primary-dark),
+            url(../img/nat-6.jpg);
+            
+        }
+        &-3 {
+            background-image:linear-gradient(-120deg,$color-tertiary-light,$color-tertiary-dark),
+            url(../img/nat-7.jpg);
+
+        }
+    }
+
+    &-heading {
+        font-size: 2.7rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 7.5rem;
+        right: 1rem;
+        text-align: right;
+        width: 75%;
+    }
+
+    &-heading-span {
+        padding: .6rem 1.2rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break:clone;
+        &--1 {
+            background: linear-gradient(to right bottom,
+            rgba($color-secondary-light,.85),
+            rgba($color-secondary-dark,.85));
+        }
+        &--2 {
+            background: linear-gradient(to right bottom,
+            rgba($color-primary-light,.85),
+            rgba($color-primary-dark,.85));
+        }
+        &--3 {
+            background: linear-gradient(to right bottom,
+            rgba($color-tertiary-light,.85),
+            rgba($color-tertiary-dark,.85));
+        }
+    }
+
+    &-details {
+        // border:3px solid black;
+        height:24rem;
+        ul {
+            // border: 3px solid black;
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                // color:black;
+                text-align: center;
+                font-size: 1.5rem;
+                //padding: 1rem; //on notebook computer
+                padding: 1.5rem //on desktop computer 
+
+
+                // &:not(:last-child) {
+                //     border-bottom: 1px solid #eee;
+                // }
+
+            }
+            li:not(:last-child) {
+                border-bottom: 1px solid #eee;
+            }
+        }
+    }
+
+
+    &__cta {
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 75%;
+        // border: 3px solid black;
+        text-align: center;
+        .btn {
+            font-size: 1.2rem;
+        }
+    }
+    &__price-box {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 9rem;
+    }
+    &__price-only {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 300;
+
+    }
+
+
+    /*screen <= 900px */
+    // @include respond(tab-port) {
+        @media only screen and (max-width: 900px),
+               only screen and (hover: none) {
+        width: 100%;
+        height: auto;
+        background-color: $color-white;
+        border-radius: 3px;
+        &:not(:last-child) {
+            margin-bottom: 2.4rem;
+        }
+        // border: 3px solid black;
+        // transform-style: preserve-3d;
+
+        &:hover &-side--front {
+            transform: rotateY(0deg);
+        }
+        &:hover &-side--back{
+            transform: rotateY(0deg);
+        }
+    
+        transition: all .9s;
+        
+        &-side {
+            position: relative;
+            width: 100%;
+            box-shadow: none;
+            &--back {
+                height: auto;
+                transform: rotateY(0deg);
+                // margin-top: -3rem;
+                clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
+                -webkit-clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
+                // z-index: 2;
+            }
+        } 
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 3.6rem 0;
+            // border: 3px solid black;
+            .btn {
+                font-size: 1.2rem;
+            }
+        }
+        &__price-box {
+            color: #fff;
+            text-align: center;
+            margin-bottom: .9rem;
+        }
+        &__price-only {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        &__price-value {
+            font-size: 4rem;
+            font-weight: 300;
+        }
+    }
+}

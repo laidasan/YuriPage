@@ -1,0 +1,55 @@
+* ,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    box-sizing: inherit;
+}
+/*rem為相對大小，依照跟元素html計算出大小，假如html設定font-size為10px;*/
+/*而子元素計算出的大小就為 3rem = 3 * 10px = 30px;*/
+html {
+    /* font-size: 10px; */
+    font-size: 62.5%;   /*62.5 * 16 = 10px*/
+
+// three methods to write @media with scss
+    // @media screen and (max-width){
+    //     font-size: 60%;
+    // }
+
+    // @include respond-phone {
+    //     font-size: 60%;
+    // }
+    @include respond(tab-land) {          // <1200?
+        font-size: 56.25%;           //1rem = 9px
+    }
+
+    @include respond(tab-port) {           // <900?
+        font-size: 50%;              //1rem = 8px
+    }
+    @include respond(big-desktop) {      //>1800?
+        font-size: 75%;              //1rem = 12px
+    }
+
+}
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color:$color-white;
+    
+}
+
+// @media screen and (max-width: 600px) {
+//     html {
+
+//     }
+// }
