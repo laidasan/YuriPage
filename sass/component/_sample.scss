@@ -17,7 +17,8 @@
         cursor: pointer;
 
         &:hover {
-            background: $color-primary-GreenLight;
+            background: $color-primary-Gray;
+            color: $color-white;
         }
     }
     &__img-box {
@@ -47,7 +48,7 @@
         padding: 0 .6rem 3.6rem;
 
 
-        transition: all .3s;
+        // transition: all .3s;
 
         &__title {
             padding: 1.2rem 0;
@@ -89,6 +90,7 @@
     &__readmore {
         &:link,
         &:visited {
+            display: none;
             position: absolute;
             right: 0;
             bottom: 0;

@@ -6,8 +6,9 @@ module.exports = {
         // module:'./app/module.js',
         // indexpage:'./app/index.js',
         // scroll: './app/scroll.js',
-        universal: './app/universal.js',
-        header: './app/header.js'
+        // universal: './app/universal.js',
+        // header: './app/header.js',
+        portfolio: './app/portfolio.js'
     },
     output: {
         path:path.resolve(__dirname,'./dist'),

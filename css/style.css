@@ -451,7 +451,8 @@
   border-radius: 6px;
   cursor: pointer; }
   .sample__wrap:hover {
-    background: #7AFEC6; }
+    background: #727177;
+    color: #fff; }
 
 .sample__img-box {
   position: relative;
@@ -476,8 +477,7 @@
 
 .sample__txt {
   text-align: left;
-  padding: 0 .6rem 3.6rem;
-  transition: all .3s; }
+  padding: 0 .6rem 3.6rem; }
   .sample__txt__title {
     padding: 1.2rem 0; }
   .sample__txt__intro {
@@ -500,6 +500,7 @@
     color: orange; }
 
 .sample__readmore:link, .sample__readmore:visited {
+  display: none;
   position: absolute;
   right: 0;
   bottom: 0;
