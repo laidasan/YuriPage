@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./parabola.js"></script>
+    <title>parabola demo</title>
+</head>
+<body>
+    <div class="element"></div>
+    <div class="target">target</div>
+
+    <script>
+        let element = document.querySelector('.element')
+        let target = document.querySelector('.target')
+        let parabola = funparabola(element,target)
+        
+        // let eleMove = false
+        let params = {
+            left: 0,
+            top: 0,
+            currentX: 0,
+            currentY: 0,
+            moveFlag :false
+        }
+        params.left = target.offsetLeft
+        params.top = target.offsetTop
+        target.addEventListener('mousedown',e => {
+            params.moveFlag = true
+            params.left = e.target.offsetLeft
+            params.top  = e.target.offsetTop
+            params.currentX = e.clientX
+            params.currentY = e.clientY
+        })
+
+        target.addEventListener('mouseup',e => {
+            params.moveFlag = false
+            params.left = e.target.offsetLeft
+            params.top = e.target.offsetTop
+        })
+
+        target.addEventListener('mousemove',e => {
+            if(!params.moveFlag) return
+
+            let nowX = e.clientX , nowY = e.clientY
+            let disX = nowX  - params.currentX , disY = nowY - params.currentY
+            e.target.style.setProperty('left',`${params.left + disX}px`)
+            e.target.style.setProperty('top',`${params.top + disY}px`)
+        })
+
+        document.body.addEventListener('click',e => {
+            parabola.init()
+        })
+        // parabola.init()
+    </script>
+</body>
+</html>
