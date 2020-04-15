@@ -16,6 +16,7 @@ body {
     height: 30px;
     border-radius: 50%;
     background: #0066aa;
+
 }
 
 .target {
@@ -28,6 +29,13 @@ body {
     /* box-shadow: 0 0 0 1px #000; */
     
     cursor: pointer;
+}
+
+.intro {
+    position: absolute;
+    top: 30px; left: 30px;
+    font-size: 1.8rem;
+    color: #0066aa;
 }
 
 

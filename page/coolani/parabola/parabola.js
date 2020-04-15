@@ -1,7 +1,7 @@
 function funparabola(element,target,options) {
     let defult = {
         // speed為每偵移動像素大小，對於大部分螢幕而言，基本上 1秒60偵(60Hz) 換算下來即是 每一偵16毫秒~17毫秒
-        speed: 16.67,
+        speed: 166.67,
         //curvature 為曲率 可以理解成 y = a * x * x + b * x +  c 的 a，正數開口向下，數值越大，開頭越小，弧度越高 
         curvature: 0.001,
         progess: function(){return this},
@@ -93,7 +93,7 @@ function funparabola(element,target,options) {
                 // 再利用 margin 或是 translate 來進行移動
                 // 直到抵達目標(目的)的 中心 x 座標
                 // 為防止移動到目的後超過 中心座標位置，所以防止過界功能就是一旦過界了，就把element(移動的元素)移動到目標目的(target)的中心位置上
-                startx = startx + rate * Math.sqrt(params.speed / (tangent * tangent) + 1)
+                startx = startx + rate * Math.sqrt(params.speed / ( (tangent * tangent) + 1))
 
                 // 防超過target中心點
                 if( (rate === 1 && startx > coordTarget.x) || (rate === -1 && startx < coordTarget.x)) {
