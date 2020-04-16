@@ -5,7 +5,17 @@
     const form = document.querySelector('.form');
     $valid.forEach((ele) => {
         ele.addEventListener('input',(e) => {
+            console.log('input')
             let checkname = `check${ele.name}`;             //組合check +  element name屬性的值
+            if(checkname === 'checkPassword' || checkname === 'checkComfirmPassword') {
+                let $passwrodContent = document.querySelector('input[name = Password]').value
+                let $ComfirmPasswordContent = document.querySelector('input[name = ComfirmPassword]').value
+
+                let PasswordResult = universal['checkPassword']($passwrodContent)
+                let ComfirmPasswordResult = universal['checkComfirmPassword']($ComfirmPasswordContent)
+                status['checkPassword'] = PasswordResult
+                status['checkComfirmPassword'] = ComfirmPasswordResult
+            }
             let result = universal[checkname](ele.value);   //把組合出來的checkname，用來呼叫對應的universal物件中的function(檢查格式正不正確)
             result ? ele.classList.remove('warn') : ele.classList.add('warn'); //符合格式就把remove class warn 反之 add class warn
             status[checkname] = result;                     //將結果存在status物件

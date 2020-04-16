@@ -4,6 +4,7 @@
     name: 'universal',
     checkEmail: function(val) {return /.+@.+\..+/.test(val)},
     checkPassword: function(val) {return /.{8,16}/.test(this._password = val)},
+    // checkPassword: function(val) {console.log(val)},
     checkComfirmPassword: function(val) {return this._password === val},
     checkPhone: function(val) {return /[0-9]{4}\s[0-9]{3}\s[0-9]{3}/.test(val)},
     checkAddress: function(val) {return /[\u4e00-\u9fa5]/.test(val);},
