@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.img__Number {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 0 1px #cd0000;
+
+    object-fit: none;
+    object-position: left top;
+    transition: object-position .3s;
+}
+
+.num0 {
+    /* object-position: left 0; */
+}
+.num1 {
+    object-position: left -40px;
+}
+.num2 {
+    object-position: left -80px;
+}
+.num3 {
+    object-position: left -120px;
+}
+.num4 {
+    object-position: left -160px;
+}
+.num5 {
+    object-position: left -200px;
+}
+.num6 {
+    object-position: left -240px;
+}
+.num7 {
+    object-position: left -280px;
+}
+.num8 {
+    object-position: left -320px;
+}
+.num9 {
+    object-position: left -360px;
+}
