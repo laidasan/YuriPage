@@ -6,10 +6,11 @@
     console.log($input,$imgs)
 
     function imgNum(e) {
-        // let target = e.target
         let value = parseInt(e.target.value)
         if(value < 100) {
             value >= 10 ? value = `0${value}` : value = `00${value}`
+        }else {
+            value = e.target.value
         }
         
         let nmstr = value.split('')
