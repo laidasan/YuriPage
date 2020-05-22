@@ -1,6 +1,7 @@
 ;(() => {
     const $input = document.querySelector('input[type="number"]')
     const $imgs = document.querySelectorAll('.img__Number')
+    const $bkdivs = document.querySelectorAll('.bk__Number')
 
     console.log($input,$imgs)
 
@@ -16,6 +17,10 @@
         $imgs.forEach( (img,index) => {
             img.className = 'img__Number'
             img.classList.add(`num${nmstr[index]}`)
+        })
+        $bkdivs.forEach( (div,index) => {
+            div.className = 'bk__Number'
+            div.classList.add(`num${nmstr[index]}`)
         })
 
     }
