@@ -14,10 +14,10 @@ module.exports = {
   rules: {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/no-v-html': 'off',
-    'no-unused-vars': 'off',
-    "vue/component-name-in-template-casing": ["error", "kebab-case", {
-      "ignores": []
-    }],
+    'no-unused-vars': 'warn',
+    'vue/component-name-in-template-casing': ['error', 'kebab-case', {
+      ignores: []
+    }]
   },
   overrides: [
     {

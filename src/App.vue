@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <router-link to="/">
-      Home
+      Home {{ $t('common.message') }}
     </router-link> |
     <router-link to="/about">
       About
@@ -10,6 +10,34 @@
   <!-- eslint-disable-next-line vue/no-multiple-template-root -->
   <router-view />
 </template>
+
+<script>
+import { computed } from 'vue'
+import { useStore } from 'vuex'
+
+export default {
+  setup (props, context) {
+    const {
+      state,
+      dispatch
+    } = useStore()
+    const message = computed(() => state.test)
+    console.log(message.value)
+
+    dispatch('getExampleAjax')
+      .then(res => {
+        console.log(res)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
+    return {
+      message
+    }
+  }
+}
+</script>
 
 <style>
 #app {
