@@ -16,5 +16,21 @@ export default createStore({
     }
   },
   modules: {
+    home: {
+      namespaced: true,
+      state: {
+        message: 'home message'
+      },
+      mutations: {
+        updateMessage (state, message) {
+          state.message = message
+        }
+      },
+      actions: {
+        homeAction ({ commit }, message) {
+          commit('updateMessage', message)
+        }
+      }
+    }
   }
 })

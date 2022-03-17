@@ -51,11 +51,12 @@ module.exports = {
 //   productionSourceMap: useSourceMap,
   filenameHashing: true,
   css: {
-    // 不把 css 打包出來
-    extract: false
+    // false: 不把 css 打包出來
+    extract: true
   },
   transpileDependencies: [
-    /node_modules[/\\\\]uuidv4[/\\\\]/
+    /node_modules[/\\\\]uuidv4[/\\\\]/,
+    /node_modules[/\\\\]vuex-composition-helpers[/\\\\]/
   ],
   configureWebpack: config => {
     // if ([mode.lab, mode.staging, mode.production].indexOf(mode.current) >= 0) {
@@ -99,8 +100,8 @@ module.exports = {
     // 為了避免 不同 webpack chunk 衝撞，
     // 需設定一個唯一名稱
     // ------------------------------------------
-    config.output
-      .jsonpFunction('chatbotJsonpFunction')
+    // config.output
+    //   .jsonpFunction('chatbotJsonpFunction')
 
     // 除開發環境外 , 特定動作
     // if (currentMode !== EnvMode.Development) {
